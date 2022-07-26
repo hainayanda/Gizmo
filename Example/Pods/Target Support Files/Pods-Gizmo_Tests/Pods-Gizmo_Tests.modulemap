@@ -1,0 +1,6 @@
+framework module Pods_Gizmo_Tests {
+  umbrella header "Pods-Gizmo_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

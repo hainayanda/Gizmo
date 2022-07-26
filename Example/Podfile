@@ -1,0 +1,10 @@
+use_frameworks!
+
+platform :ios, '11.0'
+
+target 'Gizmo_Tests' do
+  pod 'Gizmo', :path => '../'
+  
+  pod 'Quick', '~> 5.0.1'
+  pod 'Nimble', '~> 10.0.0'
+end
