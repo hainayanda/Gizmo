@@ -271,9 +271,12 @@
 		BB3604F82890C4BF00D288C4 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		BB3604FA2890C64000D288C4 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		BB3604FE2890C7DC00D288C4 /* CGSize+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Extensions.swift"; sourceTree = "<group>"; };
+		BB3605002890C8AC00D288C4 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
+		BB3605062890CBC000D288C4 /* UIEdgeInsets+ Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+ Extensions.swift"; sourceTree = "<group>"; };
 		BB3605082890CEAB00D288C4 /* Radian+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Radian+Extensions.swift"; sourceTree = "<group>"; };
 		BB36050C2890CFFF00D288C4 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		BB36050E2890D07000D288C4 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		BB3605122890D2C200D288C4 /* ClosureHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureHelper.swift; sourceTree = "<group>"; };
 		BB5D7CE0E6246798ABFD9DAAE4915E71 /* Nimble-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Nimble-Info.plist"; sourceTree = "<group>"; };
 		BBA4F4C4573FD9589D1CA0CA3DD18A0C /* BeResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeResult.swift; path = Sources/Nimble/Matchers/BeResult.swift; sourceTree = "<group>"; };
 		BEF47FC877C62C95F62674E847C0FD34 /* Pods-Gizmo_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gizmo_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -591,6 +594,8 @@
 			isa = PBXGroup;
 			children = (
 				BB3604FE2890C7DC00D288C4 /* CGSize+Extensions.swift */,
+				BB3605002890C8AC00D288C4 /* CGRect+Extensions.swift */,
+				BB3605062890CBC000D288C4 /* UIEdgeInsets+ Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -855,10 +860,12 @@
 				BB3605132890D2C200D288C4 /* ClosureHelper.swift in Sources */,
 				BB36050D2890CFFF00D288C4 /* TimeInterval+Extensions.swift in Sources */,
 				BB3604F72890C3B200D288C4 /* Date+Extensions.swift in Sources */,
+				BB3605072890CBC000D288C4 /* UIEdgeInsets+ Extensions.swift in Sources */,
 				BB3604FF2890C7DC00D288C4 /* CGSize+Extensions.swift in Sources */,
 				BB3604F52890BEF500D288C4 /* Array+Extensions.swift in Sources */,
 				A82873B21E89E3EECA5714B24FFF6427 /* Gizmo-dummy.m in Sources */,
 				BB36050F2890D07000D288C4 /* String+Extensions.swift in Sources */,
+				BB3605012890C8AC00D288C4 /* CGRect+Extensions.swift in Sources */,
 				BB3604F92890C4BF00D288C4 /* Int+Extensions.swift in Sources */,
 				BB3605092890CEAB00D288C4 /* Radian+Extensions.swift in Sources */,
 				BB3604FB2890C64000D288C4 /* Dictionary+Extensions.swift in Sources */,
