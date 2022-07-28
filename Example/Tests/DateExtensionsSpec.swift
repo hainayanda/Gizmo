@@ -1,5 +1,5 @@
 //
-//  DateExtensionSpec.swift
+//  DateExtensionsSpec.swift
 //  Gizmo_Tests
 //
 //  Created by Nayanda Haberty on 27/07/22.
@@ -11,7 +11,7 @@ import Quick
 import Nimble
 import Gizmo
 
-class DateExtensionSpec: QuickSpec {
+class DateExtensionsSpec: QuickSpec {
     
     override func spec() {
         it("should true if date is right") {
