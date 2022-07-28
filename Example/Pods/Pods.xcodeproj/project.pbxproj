@@ -96,6 +96,7 @@
 		AFB4F603FD0F5C407CB8920F6A5BA7A1 /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9317EF9B3052FC9D544E30801F901 /* Expectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		B93F3526A95D7F43EEBFEE5E453E4795 /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8634034723707BA489895B2AC37A /* BeLessThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		BB3604F1288FEF8A00D288C4 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3604F0288FEF8A00D288C4 /* Collection+Extensions.swift */; };
+		BB3604F52890BEF500D288C4 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3604F42890BEF500D288C4 /* Array+Extensions.swift */; };
 		BB3604F72890C3B200D288C4 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3604F62890C3B200D288C4 /* Date+Extensions.swift */; };
 		BB3604F92890C4BF00D288C4 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3604F82890C4BF00D288C4 /* Int+Extensions.swift */; };
 		BB3604FB2890C64000D288C4 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3604FA2890C64000D288C4 /* Dictionary+Extensions.swift */; };
@@ -264,6 +265,7 @@
 		B8E90E6CB10C947F85BD391639323094 /* Gizmo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Gizmo.release.xcconfig; sourceTree = "<group>"; };
 		BAE263041362D074978BB3B577DF0A05 /* Nimble */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Nimble; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3604F0288FEF8A00D288C4 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		BB3604F42890BEF500D288C4 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		BB3604F62890C3B200D288C4 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		BB3604F82890C4BF00D288C4 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		BB3604FA2890C64000D288C4 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
@@ -571,6 +573,7 @@
 			isa = PBXGroup;
 			children = (
 				BB3604F0288FEF8A00D288C4 /* Collection+Extensions.swift */,
+				BB3604F42890BEF500D288C4 /* Array+Extensions.swift */,
 				BB3604F62890C3B200D288C4 /* Date+Extensions.swift */,
 				BB3604F82890C4BF00D288C4 /* Int+Extensions.swift */,
 				BB3604FA2890C64000D288C4 /* Dictionary+Extensions.swift */,
@@ -842,6 +845,7 @@
 				BB3605132890D2C200D288C4 /* ClosureHelper.swift in Sources */,
 				BB36050D2890CFFF00D288C4 /* TimeInterval+Extensions.swift in Sources */,
 				BB3604F72890C3B200D288C4 /* Date+Extensions.swift in Sources */,
+				BB3604F52890BEF500D288C4 /* Array+Extensions.swift in Sources */,
 				A82873B21E89E3EECA5714B24FFF6427 /* Gizmo-dummy.m in Sources */,
 				BB36050F2890D07000D288C4 /* String+Extensions.swift in Sources */,
 				BB3604F92890C4BF00D288C4 /* Int+Extensions.swift in Sources */,
