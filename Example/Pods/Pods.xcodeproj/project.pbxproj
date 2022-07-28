@@ -100,6 +100,7 @@
 		BB3604F72890C3B200D288C4 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3604F62890C3B200D288C4 /* Date+Extensions.swift */; };
 		BB3604F92890C4BF00D288C4 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3604F82890C4BF00D288C4 /* Int+Extensions.swift */; };
 		BB3604FB2890C64000D288C4 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3604FA2890C64000D288C4 /* Dictionary+Extensions.swift */; };
+		BB3604FF2890C7DC00D288C4 /* CGSize+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3604FE2890C7DC00D288C4 /* CGSize+Extensions.swift */; };
 		BB3605092890CEAB00D288C4 /* Radian+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3605082890CEAB00D288C4 /* Radian+Extensions.swift */; };
 		BB36050D2890CFFF00D288C4 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36050C2890CFFF00D288C4 /* TimeInterval+Extensions.swift */; };
 		BB36050F2890D07000D288C4 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36050E2890D07000D288C4 /* String+Extensions.swift */; };
@@ -269,6 +270,7 @@
 		BB3604F62890C3B200D288C4 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		BB3604F82890C4BF00D288C4 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		BB3604FA2890C64000D288C4 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		BB3604FE2890C7DC00D288C4 /* CGSize+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Extensions.swift"; sourceTree = "<group>"; };
 		BB3605082890CEAB00D288C4 /* Radian+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Radian+Extensions.swift"; sourceTree = "<group>"; };
 		BB36050C2890CFFF00D288C4 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		BB36050E2890D07000D288C4 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -585,6 +587,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		BB3604FD2890C7C800D288C4 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				BB3604FE2890C7DC00D288C4 /* CGSize+Extensions.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		C9EFAB47206223DC51EDDD54791CC8F3 /* Pods-Gizmo_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -845,6 +855,7 @@
 				BB3605132890D2C200D288C4 /* ClosureHelper.swift in Sources */,
 				BB36050D2890CFFF00D288C4 /* TimeInterval+Extensions.swift in Sources */,
 				BB3604F72890C3B200D288C4 /* Date+Extensions.swift in Sources */,
+				BB3604FF2890C7DC00D288C4 /* CGSize+Extensions.swift in Sources */,
 				BB3604F52890BEF500D288C4 /* Array+Extensions.swift in Sources */,
 				A82873B21E89E3EECA5714B24FFF6427 /* Gizmo-dummy.m in Sources */,
 				BB36050F2890D07000D288C4 /* String+Extensions.swift in Sources */,

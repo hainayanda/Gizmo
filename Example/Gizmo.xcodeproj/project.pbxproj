@@ -15,6 +15,7 @@
 		BB36051F2892579900D288C4 /* ClosureHelperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36051E2892579900D288C4 /* ClosureHelperSpec.swift */; };
 		BB360521289265AD00D288C4 /* ArrayExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB360520289265AD00D288C4 /* ArrayExtensionsSpec.swift */; };
 		BB3605232892BB8200D288C4 /* RadianExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3605222892BB8200D288C4 /* RadianExtensionsSpec.swift */; };
+		BB3605262892BDC400D288C4 /* CGSizeExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3605252892BDC400D288C4 /* CGSizeExtensionsSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BB36051E2892579900D288C4 /* ClosureHelperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureHelperSpec.swift; sourceTree = "<group>"; };
 		BB360520289265AD00D288C4 /* ArrayExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionsSpec.swift; sourceTree = "<group>"; };
 		BB3605222892BB8200D288C4 /* RadianExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadianExtensionsSpec.swift; sourceTree = "<group>"; };
+		BB3605252892BDC400D288C4 /* CGSizeExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtensionsSpec.swift; sourceTree = "<group>"; };
 		F2C13134AD836193EA375B7B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				BB3605242892BD6E00D288C4 /* UIKit */,
 				BB3605152890EF0100D288C4 /* Common */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -113,6 +116,14 @@
 				BB3605222892BB8200D288C4 /* RadianExtensionsSpec.swift */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		BB3605242892BD6E00D288C4 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				BB3605252892BDC400D288C4 /* CGSizeExtensionsSpec.swift */,
+			);
+			name = UIKit;
 			sourceTree = "<group>";
 		};
 		EE116DE459334FEAB0EDFA01 /* Pods */ = {
@@ -248,6 +259,7 @@
 				BB36051728911A5100D288C4 /* DateExtensionsSpec.swift in Sources */,
 				BB360521289265AD00D288C4 /* ArrayExtensionsSpec.swift in Sources */,
 				BB3604F328902C6F00D288C4 /* CollectionExtensionsSpec.swift in Sources */,
+				BB3605262892BDC400D288C4 /* CGSizeExtensionsSpec.swift in Sources */,
 				BB360519289250CB00D288C4 /* DictionaryExtensionsSpec.swift in Sources */,
 				BB36051D2892565700D288C4 /* StringExtensionsSpec.swift in Sources */,
 			);
