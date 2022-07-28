@@ -29,9 +29,9 @@ public extension Date {
         Date() < self
     }
     
-    /// true if the date is considered as now. The error tolerable is +- 1 microsecond from actual Date now
+    /// true if the date is considered as now. The error tolerable is +- 1 miliSeconds from actual Date now
     @inlinable var isNow: Bool {
-        abs(self.timeLeft(to: Date())) < 1.microSeconds
+        abs(self.timeLeft(to: Date())) < 1.miliSeconds
     }
     
     /// Return time left from this date to another date

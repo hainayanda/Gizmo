@@ -16,23 +16,25 @@ class DateExtensionSpec: QuickSpec {
     override func spec() {
         it("should true if date is right") {
             expect(Date().isToday).to(beTrue())
-            expect(Date(timeIntervalSinceNow: 24.hours).isTomorrow).to(beTrue())
-            expect(Date(timeIntervalSinceNow: -24.hours).isYesterday).to(beTrue())
-            expect(Date.distantPast.isPast).to(beTrue())
-            expect(Date.distantFuture.isFuture).to(beTrue())
+            expect(24.hours.sinceNow.isTomorrow).to(beTrue())
+            expect(24.hours.ago.isYesterday).to(beTrue())
+            expect(Int.random(in: 1..<1000).days.ago.isPast).to(beTrue())
+            expect(Int.random(in: 1..<1000).days.sinceNow.isFuture).to(beTrue())
             expect(Date().isNow).to(beTrue())
         }
         it("should false if date is not right") {
-            expect(Date.distantPast.isToday).to(beFalse())
-            expect(Date.distantFuture.isToday).to(beFalse())
-            expect(Date.distantPast.isYesterday).to(beFalse())
-            expect(Date.distantFuture.isYesterday).to(beFalse())
-            expect(Date.distantPast.isTomorrow).to(beFalse())
-            expect(Date.distantFuture.isTomorrow).to(beFalse())
-            expect(Date.distantPast.isNow).to(beFalse())
-            expect(Date.distantFuture.isNow).to(beFalse())
-            expect(Date.distantPast.isFuture).to(beFalse())
-            expect(Date.distantFuture.isPast).to(beFalse())
+            let pastWeeks = Int.random(in: 1..<10).weeks.ago
+            let nextWeeks = Int.random(in: 1..<10).weeks.sinceNow
+            expect(pastWeeks.isToday).to(beFalse())
+            expect(nextWeeks.isToday).to(beFalse())
+            expect(pastWeeks.isYesterday).to(beFalse())
+            expect(nextWeeks.isYesterday).to(beFalse())
+            expect(pastWeeks.isTomorrow).to(beFalse())
+            expect(nextWeeks.isTomorrow).to(beFalse())
+            expect(pastWeeks.isNow).to(beFalse())
+            expect(nextWeeks.isNow).to(beFalse())
+            expect(pastWeeks.isFuture).to(beFalse())
+            expect(nextWeeks.isPast).to(beFalse())
         }
         it("should return timeleft to other date right") {
             let now = Date()
@@ -41,7 +43,7 @@ class DateExtensionSpec: QuickSpec {
             expect(now.timeLeft(to: date) - timeLeft).to(beLessThan(1.microSeconds))
         }
         it("should format date to string") {
-            let date = Date(timeIntervalSince1970: 673808400)
+            let date = 673808400.seconds.since1970
             expect(date.dateString("dd MMM yyyy")).to(equal("10 May 1991"))
         }
         it("should create date from string") {

@@ -12,6 +12,7 @@ import Nimble
 import Gizmo
 
 class CollectionExtensionsSpec: QuickSpec {
+    
     override func spec() {
         it("should still return value if index in bounds") {
             let array = [1, 2, 3, 4, 5]
