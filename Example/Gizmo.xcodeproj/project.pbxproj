@@ -10,6 +10,7 @@
 		01305A390AFEF413E5176632 /* Pods_Gizmo_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB23B943D5BE922101FA16C /* Pods_Gizmo_Tests.framework */; };
 		BB3604F328902C6F00D288C4 /* CollectionExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3604F228902C6F00D288C4 /* CollectionExtensionsSpec.swift */; };
 		BB36051728911A5100D288C4 /* DateExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36051628911A5100D288C4 /* DateExtensionSpec.swift */; };
+		BB360519289250CB00D288C4 /* DictionaryExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB360518289250CB00D288C4 /* DictionaryExtensionsSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A54AA5409F196F12E35653D1 /* Gizmo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Gizmo.podspec; path = ../Gizmo.podspec; sourceTree = "<group>"; };
 		BB3604F228902C6F00D288C4 /* CollectionExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensionsSpec.swift; sourceTree = "<group>"; };
 		BB36051628911A5100D288C4 /* DateExtensionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionSpec.swift; sourceTree = "<group>"; };
+		BB360518289250CB00D288C4 /* DictionaryExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsSpec.swift; sourceTree = "<group>"; };
 		F2C13134AD836193EA375B7B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 			children = (
 				BB3604F228902C6F00D288C4 /* CollectionExtensionsSpec.swift */,
 				BB36051628911A5100D288C4 /* DateExtensionSpec.swift */,
+				BB360518289250CB00D288C4 /* DictionaryExtensionsSpec.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			files = (
 				BB36051728911A5100D288C4 /* DateExtensionSpec.swift in Sources */,
 				BB3604F328902C6F00D288C4 /* CollectionExtensionsSpec.swift in Sources */,
+				BB360519289250CB00D288C4 /* DictionaryExtensionsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

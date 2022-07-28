@@ -98,6 +98,7 @@
 		BB3604F1288FEF8A00D288C4 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3604F0288FEF8A00D288C4 /* Collection+Extensions.swift */; };
 		BB3604F72890C3B200D288C4 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3604F62890C3B200D288C4 /* Date+Extensions.swift */; };
 		BB3604F92890C4BF00D288C4 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3604F82890C4BF00D288C4 /* Int+Extensions.swift */; };
+		BB3604FB2890C64000D288C4 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3604FA2890C64000D288C4 /* Dictionary+Extensions.swift */; };
 		BB36050D2890CFFF00D288C4 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36050C2890CFFF00D288C4 /* TimeInterval+Extensions.swift */; };
 		BD3ABAC28025564DCF2E6C12009435DF /* CwlMachBadInstructionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6A8AE2D5EF989F29A4FFB4EB7D52A8 /* CwlMachBadInstructionHandler.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		BF62525E5628A9F7604BA8479691318C /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E2AF01C07390467B2A032C1081912 /* BeLogical.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -263,6 +264,7 @@
 		BB3604F0288FEF8A00D288C4 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		BB3604F62890C3B200D288C4 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		BB3604F82890C4BF00D288C4 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		BB3604FA2890C64000D288C4 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		BB36050C2890CFFF00D288C4 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		BB5D7CE0E6246798ABFD9DAAE4915E71 /* Nimble-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Nimble-Info.plist"; sourceTree = "<group>"; };
 		BBA4F4C4573FD9589D1CA0CA3DD18A0C /* BeResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeResult.swift; path = Sources/Nimble/Matchers/BeResult.swift; sourceTree = "<group>"; };
@@ -567,6 +569,7 @@
 				BB3604F0288FEF8A00D288C4 /* Collection+Extensions.swift */,
 				BB3604F62890C3B200D288C4 /* Date+Extensions.swift */,
 				BB3604F82890C4BF00D288C4 /* Int+Extensions.swift */,
+				BB3604FA2890C64000D288C4 /* Dictionary+Extensions.swift */,
 				BB36050C2890CFFF00D288C4 /* TimeInterval+Extensions.swift */,
 			);
 			path = Common;
@@ -833,6 +836,7 @@
 				BB3604F72890C3B200D288C4 /* Date+Extensions.swift in Sources */,
 				A82873B21E89E3EECA5714B24FFF6427 /* Gizmo-dummy.m in Sources */,
 				BB3604F92890C4BF00D288C4 /* Int+Extensions.swift in Sources */,
+				BB3604FB2890C64000D288C4 /* Dictionary+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
