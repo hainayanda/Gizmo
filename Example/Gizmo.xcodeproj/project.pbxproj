@@ -12,6 +12,7 @@
 		BB36051728911A5100D288C4 /* DateExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36051628911A5100D288C4 /* DateExtensionsSpec.swift */; };
 		BB360519289250CB00D288C4 /* DictionaryExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB360518289250CB00D288C4 /* DictionaryExtensionsSpec.swift */; };
 		BB36051D2892565700D288C4 /* StringExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36051C2892565700D288C4 /* StringExtensionsSpec.swift */; };
+		BB36051F2892579900D288C4 /* ClosureHelperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36051E2892579900D288C4 /* ClosureHelperSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BB36051628911A5100D288C4 /* DateExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionsSpec.swift; sourceTree = "<group>"; };
 		BB360518289250CB00D288C4 /* DictionaryExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsSpec.swift; sourceTree = "<group>"; };
 		BB36051C2892565700D288C4 /* StringExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionsSpec.swift; sourceTree = "<group>"; };
+		BB36051E2892579900D288C4 /* ClosureHelperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureHelperSpec.swift; sourceTree = "<group>"; };
 		F2C13134AD836193EA375B7B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 				BB36051628911A5100D288C4 /* DateExtensionsSpec.swift */,
 				BB360518289250CB00D288C4 /* DictionaryExtensionsSpec.swift */,
 				BB36051C2892565700D288C4 /* StringExtensionsSpec.swift */,
+				BB36051E2892579900D288C4 /* ClosureHelperSpec.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB36051F2892579900D288C4 /* ClosureHelperSpec.swift in Sources */,
 				BB36051728911A5100D288C4 /* DateExtensionsSpec.swift in Sources */,
 				BB3604F328902C6F00D288C4 /* CollectionExtensionsSpec.swift in Sources */,
 				BB360519289250CB00D288C4 /* DictionaryExtensionsSpec.swift in Sources */,

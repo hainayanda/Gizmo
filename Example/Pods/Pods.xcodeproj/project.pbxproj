@@ -577,6 +577,7 @@
 				BB3605082890CEAB00D288C4 /* Radian+Extensions.swift */,
 				BB36050C2890CFFF00D288C4 /* TimeInterval+Extensions.swift */,
 				BB36050E2890D07000D288C4 /* String+Extensions.swift */,
+				BB3605122890D2C200D288C4 /* ClosureHelper.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -838,6 +839,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB3604F1288FEF8A00D288C4 /* Collection+Extensions.swift in Sources */,
+				BB3605132890D2C200D288C4 /* ClosureHelper.swift in Sources */,
 				BB36050D2890CFFF00D288C4 /* TimeInterval+Extensions.swift in Sources */,
 				BB3604F72890C3B200D288C4 /* Date+Extensions.swift in Sources */,
 				A82873B21E89E3EECA5714B24FFF6427 /* Gizmo-dummy.m in Sources */,
