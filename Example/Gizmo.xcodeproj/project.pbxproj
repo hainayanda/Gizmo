@@ -117,13 +117,13 @@
 		BB3605152890EF0100D288C4 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BB360520289265AD00D288C4 /* ArrayExtensionsSpec.swift */,
+				BB36051E2892579900D288C4 /* ClosureHelperSpec.swift */,
 				BB3604F228902C6F00D288C4 /* CollectionExtensionsSpec.swift */,
 				BB36051628911A5100D288C4 /* DateExtensionsSpec.swift */,
 				BB360518289250CB00D288C4 /* DictionaryExtensionsSpec.swift */,
-				BB36051C2892565700D288C4 /* StringExtensionsSpec.swift */,
-				BB36051E2892579900D288C4 /* ClosureHelperSpec.swift */,
-				BB360520289265AD00D288C4 /* ArrayExtensionsSpec.swift */,
 				BB3605222892BB8200D288C4 /* RadianExtensionsSpec.swift */,
+				BB36051C2892565700D288C4 /* StringExtensionsSpec.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -131,12 +131,12 @@
 		BB3605242892BD6E00D288C4 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				BB3605252892BDC400D288C4 /* CGSizeExtensionsSpec.swift */,
-				BB3605272892C0A700D288C4 /* CGRectExtensionsSpec.swift */,
 				BB36052928935F8B00D288C4 /* CACornerMaskExtensionsSpec.swift */,
+				BB3605272892C0A700D288C4 /* CGRectExtensionsSpec.swift */,
+				BB3605252892BDC400D288C4 /* CGSizeExtensionsSpec.swift */,
+				BB36052F28938C3300D288C4 /* UIColorExtensionsSpec.swift */,
 				BB36052B289385DB00D288C4 /* UIEdgeExtensionsSpec.swift */,
 				BB36052D2893881100D288C4 /* UIResponderExtensionsSpec.swift */,
-				BB36052F28938C3300D288C4 /* UIColorExtensionsSpec.swift */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";

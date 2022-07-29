@@ -586,15 +586,15 @@
 		BB3604FC2890C7BD00D288C4 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				BB3604F0288FEF8A00D288C4 /* Collection+Extensions.swift */,
 				BB3604F42890BEF500D288C4 /* Array+Extensions.swift */,
-				BB3604F62890C3B200D288C4 /* Date+Extensions.swift */,
-				BB3604F82890C4BF00D288C4 /* Int+Extensions.swift */,
-				BB3604FA2890C64000D288C4 /* Dictionary+Extensions.swift */,
-				BB3605082890CEAB00D288C4 /* Radian+Extensions.swift */,
-				BB36050C2890CFFF00D288C4 /* TimeInterval+Extensions.swift */,
-				BB36050E2890D07000D288C4 /* String+Extensions.swift */,
 				BB3605122890D2C200D288C4 /* ClosureHelper.swift */,
+				BB3604F0288FEF8A00D288C4 /* Collection+Extensions.swift */,
+				BB3604F62890C3B200D288C4 /* Date+Extensions.swift */,
+				BB3604FA2890C64000D288C4 /* Dictionary+Extensions.swift */,
+				BB3604F82890C4BF00D288C4 /* Int+Extensions.swift */,
+				BB3605082890CEAB00D288C4 /* Radian+Extensions.swift */,
+				BB36050E2890D07000D288C4 /* String+Extensions.swift */,
+				BB36050C2890CFFF00D288C4 /* TimeInterval+Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -602,9 +602,9 @@
 		BB3604FD2890C7C800D288C4 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				BB3604FE2890C7DC00D288C4 /* CGSize+Extensions.swift */,
-				BB3605002890C8AC00D288C4 /* CGRect+Extensions.swift */,
 				BB3605022890C96D00D288C4 /* CACornerMask+Extensions.swift */,
+				BB3605002890C8AC00D288C4 /* CGRect+Extensions.swift */,
+				BB3604FE2890C7DC00D288C4 /* CGSize+Extensions.swift */,
 				BB3605042890CA6000D288C4 /* UIColor+Extensions.swift */,
 				BB3605062890CBC000D288C4 /* UIEdgeInsets+ Extensions.swift */,
 				BB3605102890D1B900D288C4 /* UIResponder+Extensions.swift */,
