@@ -103,6 +103,7 @@
 		BB3604FF2890C7DC00D288C4 /* CGSize+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3604FE2890C7DC00D288C4 /* CGSize+Extensions.swift */; };
 		BB3605012890C8AC00D288C4 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3605002890C8AC00D288C4 /* CGRect+Extensions.swift */; };
 		BB3605032890C96D00D288C4 /* CACornerMask+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3605022890C96D00D288C4 /* CACornerMask+Extensions.swift */; };
+		BB3605052890CA6000D288C4 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3605042890CA6000D288C4 /* UIColor+Extensions.swift */; };
 		BB3605072890CBC000D288C4 /* UIEdgeInsets+ Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3605062890CBC000D288C4 /* UIEdgeInsets+ Extensions.swift */; };
 		BB3605092890CEAB00D288C4 /* Radian+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3605082890CEAB00D288C4 /* Radian+Extensions.swift */; };
 		BB36050D2890CFFF00D288C4 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36050C2890CFFF00D288C4 /* TimeInterval+Extensions.swift */; };
@@ -278,6 +279,7 @@
 		BB3604FE2890C7DC00D288C4 /* CGSize+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Extensions.swift"; sourceTree = "<group>"; };
 		BB3605002890C8AC00D288C4 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
 		BB3605022890C96D00D288C4 /* CACornerMask+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CACornerMask+Extensions.swift"; sourceTree = "<group>"; };
+		BB3605042890CA6000D288C4 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		BB3605062890CBC000D288C4 /* UIEdgeInsets+ Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+ Extensions.swift"; sourceTree = "<group>"; };
 		BB3605082890CEAB00D288C4 /* Radian+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Radian+Extensions.swift"; sourceTree = "<group>"; };
 		BB36050C2890CFFF00D288C4 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
@@ -603,6 +605,7 @@
 				BB3604FE2890C7DC00D288C4 /* CGSize+Extensions.swift */,
 				BB3605002890C8AC00D288C4 /* CGRect+Extensions.swift */,
 				BB3605022890C96D00D288C4 /* CACornerMask+Extensions.swift */,
+				BB3605042890CA6000D288C4 /* UIColor+Extensions.swift */,
 				BB3605062890CBC000D288C4 /* UIEdgeInsets+ Extensions.swift */,
 				BB3605102890D1B900D288C4 /* UIResponder+Extensions.swift */,
 			);
@@ -866,6 +869,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB3604F1288FEF8A00D288C4 /* Collection+Extensions.swift in Sources */,
+				BB3605052890CA6000D288C4 /* UIColor+Extensions.swift in Sources */,
 				BB3605132890D2C200D288C4 /* ClosureHelper.swift in Sources */,
 				BB3605032890C96D00D288C4 /* CACornerMask+Extensions.swift in Sources */,
 				BB36050D2890CFFF00D288C4 /* TimeInterval+Extensions.swift in Sources */,
