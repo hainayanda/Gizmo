@@ -30,7 +30,7 @@ public typealias QuadArgsClosure<Arg1, Arg2, Arg3, Arg4> = ReturnQuadArgsClosure
 ///   - object: The object that have the method resemble with void closure
 ///   - method: The method that resemble with void closure
 /// - Returns: Void closure that will call the method safely
-public func methodOf<Object: AnyObject>(
+@inlinable public func methodOf<Object: AnyObject>(
     _ object: Object,
     _ method: @escaping (Object) -> VoidClosure) -> VoidClosure {
         { [weak object] in
@@ -50,7 +50,7 @@ public func methodOf<Object: AnyObject>(
 ///   - object: The object that have the method resemble with one arguments closure
 ///   - method: The method that resemble with one arguments closure
 /// - Returns: One arguments closure that will call the method safely
-public func methodOf<Object: AnyObject, Argument>(
+@inlinable public func methodOf<Object: AnyObject, Argument>(
     _ object: Object,
     _ method: @escaping (Object) -> Closure<Argument>) -> Closure<Argument> {
         { [weak object] arg in
@@ -70,7 +70,7 @@ public func methodOf<Object: AnyObject, Argument>(
 ///   - object: The object that have the method resemble with two arguments closure
 ///   - method: The method that resemble with two arguments closure
 /// - Returns: Two arguments closure that will call the method safely
-public func methodOf<Object: AnyObject, Arg1, Arg2>(
+@inlinable public func methodOf<Object: AnyObject, Arg1, Arg2>(
     _ object: Object,
     _ method: @escaping (Object) -> BiArgsClosure<Arg1, Arg2>) -> BiArgsClosure<Arg1, Arg2> {
         { [weak object] arg1, arg2 in
@@ -90,7 +90,7 @@ public func methodOf<Object: AnyObject, Arg1, Arg2>(
 ///   - object: The object that have the method resemble with two arguments closure
 ///   - method: The method that resemble with two arguments closure
 /// - Returns: Two arguments closure that will call the method safely
-public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3>(
+@inlinable public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3>(
     _ object: Object,
     _ method: @escaping (Object) -> TriArgsClosure<Arg1, Arg2, Arg3>) -> TriArgsClosure<Arg1, Arg2, Arg3> {
         { [weak object] arg1, arg2, arg3 in
@@ -110,7 +110,7 @@ public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3>(
 ///   - object: The object that have the method resemble with two arguments closure
 ///   - method: The method that resemble with two arguments closure
 /// - Returns: Two arguments closure that will call the method safely
-public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3, Arg4>(
+@inlinable public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3, Arg4>(
     _ object: Object,
     _ method: @escaping (Object) -> QuadArgsClosure<Arg1, Arg2, Arg3, Arg4>) -> QuadArgsClosure<Arg1, Arg2, Arg3, Arg4> {
         { [weak object] arg1, arg2, arg3, arg4 in
@@ -130,7 +130,7 @@ public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3, Arg4>(
 ///   - object: The object that have the method resemble with void closure
 ///   - method: The method that resemble with void closure
 /// - Returns: Void closure that will call the method safely
-public func methodOf<Object: AnyObject, Return>(
+@inlinable public func methodOf<Object: AnyObject, Return>(
     _ object: Object,
     _ method: @escaping (Object) -> ReturnClosure<Return?>) -> ReturnClosure<Return?> {
         { [weak object] in
@@ -149,7 +149,7 @@ public func methodOf<Object: AnyObject, Return>(
 ///   - method: The method that resemble with void closure
 ///   - defaultReturn: The result that will be returned if object is already released
 /// - Returns: Void closure that will call the method safely
-public func methodOf<Object: AnyObject, Return>(
+@inlinable public func methodOf<Object: AnyObject, Return>(
     _ object: Object,
     _ method: @escaping (Object) -> ReturnClosure<Return>,
     ifObjectReleasedThenReturn defaultReturn: Return) -> ReturnClosure<Return> {
@@ -172,7 +172,7 @@ public func methodOf<Object: AnyObject, Return>(
 ///   - object: The object that have the method resemble with one arguments closure
 ///   - method: The method that resemble with one arguments closure
 /// - Returns: One arguments closure that will call the method safely
-public func methodOf<Object: AnyObject, Argument, Return>(
+@inlinable public func methodOf<Object: AnyObject, Argument, Return>(
     _ object: Object,
     _ method: @escaping (Object) -> ReturnSingleArgClosure<Argument, Return?>) -> ReturnSingleArgClosure<Argument, Return?> {
         { [weak object] arg in
@@ -191,7 +191,7 @@ public func methodOf<Object: AnyObject, Argument, Return>(
 ///   - method: The method that resemble with one arguments closure
 ///   - defaultReturn: The result that will be returned if object is already released
 /// - Returns: One arguments closure that will call the method safely
-public func methodOf<Object: AnyObject, Argument, Return>(
+@inlinable public func methodOf<Object: AnyObject, Argument, Return>(
     _ object: Object,
     _ method: @escaping (Object) -> ReturnSingleArgClosure<Argument, Return>,
     ifObjectReleasedThenReturn defaultReturn: Return) -> ReturnSingleArgClosure<Argument, Return> {
@@ -214,7 +214,7 @@ public func methodOf<Object: AnyObject, Argument, Return>(
 ///   - object: The object that have the method resemble with two arguments closure
 ///   - method: The method that resemble with two arguments closure
 /// - Returns: Two arguments closure that will call the method safely
-public func methodOf<Object: AnyObject, Arg1, Arg2, Return>(
+@inlinable public func methodOf<Object: AnyObject, Arg1, Arg2, Return>(
     _ object: Object,
     _ method: @escaping (Object) -> ReturnBiArgsClosure<Arg1, Arg2, Return?>) -> ReturnBiArgsClosure<Arg1, Arg2, Return?> {
         { [weak object] arg1, arg2 in
@@ -233,7 +233,7 @@ public func methodOf<Object: AnyObject, Arg1, Arg2, Return>(
 ///   - method: The method that resemble with two arguments closure
 ///   - defaultReturn: The result that will be returned if object is already released
 /// - Returns: Two arguments closure that will call the method safely
-public func methodOf<Object: AnyObject, Arg1, Arg2, Return>(
+@inlinable public func methodOf<Object: AnyObject, Arg1, Arg2, Return>(
     _ object: Object,
     _ method: @escaping (Object) -> ReturnBiArgsClosure<Arg1, Arg2, Return>,
     ifObjectReleasedThenReturn defaultReturn: Return) -> ReturnBiArgsClosure<Arg1, Arg2, Return> {
@@ -256,7 +256,7 @@ public func methodOf<Object: AnyObject, Arg1, Arg2, Return>(
 ///   - object: The object that have the method resemble with three  arguments closure
 ///   - method: The method that resemble with three arguments closure
 /// - Returns: Three  arguments closure that will call the method safely
-public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3, Return>(
+@inlinable public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3, Return>(
     _ object: Object,
     _ method: @escaping (Object) -> ReturnTriArgsClosure<Arg1, Arg2, Arg3, Return?>) -> ReturnTriArgsClosure<Arg1, Arg2, Arg3, Return?> {
         { [weak object] arg1, arg2, arg3 in
@@ -275,7 +275,7 @@ public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3, Return>(
 ///   - method: The method that resemble with three arguments closure
 ///   - defaultReturn: The result that will be returned if object is already released
 /// - Returns: Three  arguments closure that will call the method safely
-public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3, Return>(
+@inlinable public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3, Return>(
     _ object: Object,
     _ method: @escaping (Object) -> ReturnTriArgsClosure<Arg1, Arg2, Arg3, Return>,
     ifObjectReleasedThenReturn defaultReturn: Return) -> ReturnTriArgsClosure<Arg1, Arg2, Arg3, Return> {
@@ -298,7 +298,7 @@ public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3, Return>(
 ///   - object: The object that have the method resemble with four arguments closure
 ///   - method: The method that resemble with four arguments closure
 /// - Returns: Four arguments closure that will call the method safely
-public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3, Arg4, Return>(
+@inlinable public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3, Arg4, Return>(
     _ object: Object,
     _ method: @escaping (Object) -> ReturnQuadArgsClosure<Arg1, Arg2, Arg3, Arg4, Return?>) -> ReturnQuadArgsClosure<Arg1, Arg2, Arg3, Arg4, Return?> {
         { [weak object] arg1, arg2, arg3, arg4 in
@@ -317,7 +317,7 @@ public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3, Arg4, Return>(
 ///   - method: The method that resemble with four arguments closure
 ///   - defaultReturn: The result that will be returned if object is already released
 /// - Returns: Four arguments closure that will call the method safely
-public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3, Arg4, Return>(
+@inlinable public func methodOf<Object: AnyObject, Arg1, Arg2, Arg3, Arg4, Return>(
     _ object: Object,
     _ method: @escaping (Object) -> ReturnQuadArgsClosure<Arg1, Arg2, Arg3, Arg4, Return>,
     ifObjectReleasedThenReturn defaultReturn: Return) -> ReturnQuadArgsClosure<Arg1, Arg2, Arg3, Arg4, Return> {

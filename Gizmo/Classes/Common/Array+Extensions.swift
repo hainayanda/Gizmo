@@ -81,7 +81,7 @@ public extension Array where Element: Equatable {
     /// - Complexity: O(*n* *m*), where *n* is the length of arrays and *m* is length of elements
     /// - Parameter sequence: Sequence of the elements
     /// - Returns: New array with added sequence
-    func addedIfUnique<S: Sequence>(withContentsOf sequence: S) -> [Element] where S.Element == Element {
+    @inlinable func addedIfUnique<S: Sequence>(withContentsOf sequence: S) -> [Element] where S.Element == Element {
         sequence.reduce(self) { partialResult, element in
             partialResult.addedIfUnique(with: element)
         }
@@ -112,7 +112,7 @@ public extension Array where Element: Equatable {
     ///   - index: Index of the new element
     ///   - collection: Collection of the elements
     /// - Returns: New array with added collection
-    func addedIfUnique<C: Collection>(at index: Index, withContentsOf collection: C) -> [Element] where C.Element == Element {
+    @inlinable func addedIfUnique<C: Collection>(at index: Index, withContentsOf collection: C) -> [Element] where C.Element == Element {
         var currentIndex = index
         return collection.reduce(self) { partialResult, element in
             guard !partialResult.contains(element) else { return partialResult }
@@ -147,7 +147,7 @@ public extension Array where Element: AnyObject {
     /// - Complexity: O(*n* + *m*) at average, where *n* is the length of arrays and *m* is length of sequence
     /// - Parameter sequence: Sequence of the elements
     /// - Returns: New array with added sequence
-    func addedIfUniqueInstance<S: Sequence>(withContentsOf sequence: S) -> [Element] where S.Element == Element {
+    @inlinable func addedIfUniqueInstance<S: Sequence>(withContentsOf sequence: S) -> [Element] where S.Element == Element {
         var mappedIdentifier: [ObjectIdentifier: Void] = [:]
         forEach { element in
             let identifier = ObjectIdentifier(element)
@@ -187,7 +187,7 @@ public extension Array where Element: AnyObject {
     ///   - index: Index of the new element
     ///   - collection: Collection of the elements
     /// - Returns: New array with added collection
-    func addedIfUniqueInstance<C: Collection>(at index: Index, withContentsOf collection: C) -> [Element] where C.Element == Element {
+    @inlinable func addedIfUniqueInstance<C: Collection>(at index: Index, withContentsOf collection: C) -> [Element] where C.Element == Element {
         var currentIndex = index
         var mappedIdentifier: [ObjectIdentifier: Void] = [:]
         forEach { element in
@@ -245,7 +245,7 @@ public extension Array where Element: Equatable {
     /// - Complexity: O(*n*) where *n* is the length of arrays
     /// - Parameter element: element to be removed
     /// - Returns: New array with removed element
-    func removed(_ element: Element) -> [Element] {
+    @inlinable func removed(_ element: Element) -> [Element] {
         removed { $0 == element }
     }
     
@@ -253,7 +253,7 @@ public extension Array where Element: Equatable {
     /// - Complexity: O(*n* *m*) where *n* is the length of arrays and *m* is length of sequence
     /// - Parameter elements: elements to be removed
     /// - Returns: New array with removed element
-    func removed(_ elements: [Element]) -> [Element] {
+    @inlinable func removed(_ elements: [Element]) -> [Element] {
         removed { elements.contains($0) }
     }
     
@@ -272,7 +272,7 @@ public extension Array where Element: AnyObject {
     /// - Complexity: O(*n*) where *n* is the length of arrays
     /// - Parameter element: element to be removed
     /// - Returns: New array with removed element
-    func removedSameInstance(_ element: Element) -> [Element] {
+    @inlinable func removedSameInstance(_ element: Element) -> [Element] {
         removed { $0 === element }
     }
     
@@ -280,7 +280,7 @@ public extension Array where Element: AnyObject {
     /// - Complexity: O(*n* + *m*) at average, where *n* is the length of arrays and *m* is length of sequence
     /// - Parameter elements: elements to be removed
     /// - Returns: New array with removed element
-    func removedSameInstance(in elements: [Element]) -> [Element] {
+    @inlinable func removedSameInstance(in elements: [Element]) -> [Element] {
         var seen: [ObjectIdentifier: Void] = [:]
         for element in elements {
             let identifier = ObjectIdentifier(element)
@@ -309,7 +309,7 @@ public extension Array {
     /// - Complexity: O(*n*^2) at average, where *n* is the length of arrays
     /// - Parameter consideredSame: Closure to check the element
     /// - Returns: New unique array
-    func uniqued(where consideredSame: (Element, Element) -> Bool) -> [Element] {
+    @inlinable func uniqued(where consideredSame: (Element, Element) -> Bool) -> [Element] {
         reduce([]) { partialResult, element in
             guard !partialResult.contains(where: { consideredSame(element, $0) }) else {
                 return partialResult
@@ -323,7 +323,7 @@ public extension Array {
     /// - Complexity: O(*n*) at average, where *n* is the length of arrays
     /// - Parameter hasher: Closure to convert element to compatible hash
     /// - Returns:New unique array
-    func uniqued(withHasher hasher: (Element) -> AnyHashable) -> [Element] {
+    @inlinable func uniqued(withHasher hasher: (Element) -> AnyHashable) -> [Element] {
         var seen: [AnyHashable: Void] = [:]
         return compactMap { element in
             let hash = hasher(element)
@@ -342,7 +342,7 @@ public extension Array where Element: AnyObject {
     /// The order of the element will still be the same
     /// - Complexity: O(*n*) at average, where *n* is the length of arrays
     /// The time complexity of the algorithm will be O(n) or on worst case scenario will be O(n log n)
-    var uniqueObjects: [Element] {
+    @inlinable var uniqueObjects: [Element] {
         uniqued(withHasher: { ObjectIdentifier($0) })
     }
 }
@@ -352,7 +352,7 @@ public extension Array where Element: Hashable {
     /// Create new array with unique element coming from this array
     /// The order of the element will still be the same
     /// - Complexity: O(*n*) at average, where *n* is the length of arrays
-    var unique: [Element] {
+    @inlinable var unique: [Element] {
         var seen: [Element: Void] = [:]
         return compactMap { element in
             guard seen[element] == nil else {
@@ -375,7 +375,7 @@ public extension Array {
     ///   - other: Other array
     ///   - consideredSame: Closure to check equality of the element
     /// - Returns: New array
-    func symetricDifference(with other: [Element], where consideredSame: (Element, Element) -> Bool) -> [Element] {
+    @inlinable func symetricDifference(with other: [Element], where consideredSame: (Element, Element) -> Bool) -> [Element] {
         substracted(by: other, where: consideredSame)
             .added(withContentsOf: other.substracted(by: self, where: consideredSame))
     }
@@ -387,7 +387,7 @@ public extension Array {
     ///   - other: Other array
     ///   - consideredSame: Closure to check equality of the element
     /// - Returns: New array
-    func substracted(by other: [Element], where consideredSame: (Element, Element) -> Bool) -> [Element] {
+    @inlinable func substracted(by other: [Element], where consideredSame: (Element, Element) -> Bool) -> [Element] {
         return compactMap { element in
             guard !other.contains(where: { consideredSame($0, element) }) else {
                 return nil
@@ -414,7 +414,7 @@ public extension Array {
     ///   - other: Other array
     ///   - consideredSame: Closure to check equality of the element
     /// - Returns: New array
-    func intersection(with other: [Element], where consideredSame: (Element, Element) -> Bool) -> [Element] {
+    @inlinable func intersection(with other: [Element], where consideredSame: (Element, Element) -> Bool) -> [Element] {
         compactMap { element in
             guard other.contains(where: { consideredSame($0, element) }) else {
                 return nil
@@ -504,7 +504,7 @@ public extension Array where Element: Hashable {
     /// - Complexity: O(*n* + 2 *m*) on average, where *n* is the length of arrays and *m* is length of other array
     /// - Parameter other: Other Array
     /// - Returns: New array
-    func symetricDifference(with other: [Element]) -> [Element] {
+    @inlinable func symetricDifference(with other: [Element]) -> [Element] {
         substracted(by: other)
             .added(withContentsOf: other.substracted(by: self))
     }
@@ -513,7 +513,7 @@ public extension Array where Element: Hashable {
     /// - Complexity: O(*n*) on average, where *n* is the length of arrays
     /// - Parameter other: Other array
     /// - Returns: New array
-    func substracted(by other: [Element]) -> [Element] {
+    @inlinable func substracted(by other: [Element]) -> [Element] {
         var mappedOther: [Element: Void] = [:]
         other.forEach { element in
             mappedOther[element] = ()
@@ -535,7 +535,7 @@ public extension Array where Element: Hashable {
     /// - Complexity: O(*n*) on average, where *n* is the length of arrays
     /// - Parameter other: Other array
     /// - Returns: New array
-    func intersection(with other: [Element]) -> [Element] {
+    @inlinable func intersection(with other: [Element]) -> [Element] {
         var mappedOther: [Element: Void] = [:]
         other.forEach { element in
             mappedOther[element] = ()
@@ -560,7 +560,7 @@ public extension Array where Element: AnyObject {
     /// - Complexity: O(*n* + 2 *m*) on average, where *n* is the length of arrays and *m* is length of other array 
     /// - Parameter other: Other array
     /// - Returns: New array
-    func objectsSymetricDifference(with other: [Element]) -> [Element] {
+    @inlinable func objectsSymetricDifference(with other: [Element]) -> [Element] {
         symetricDifference(with: other, withHasher: { ObjectIdentifier($0) })
     }
     
@@ -568,7 +568,7 @@ public extension Array where Element: AnyObject {
     /// - Complexity: O(*n*) on average, where *n* is the length of arrays
     /// - Parameter other: Other array
     /// - Returns: New array
-    func objectsSubstracted(by other: [Element]) -> [Element] {
+    @inlinable func objectsSubstracted(by other: [Element]) -> [Element] {
         substracted(by: other, withHasher: { ObjectIdentifier($0) })
     }
     
@@ -584,7 +584,7 @@ public extension Array where Element: AnyObject {
     /// - Complexity: O(*n*) on average, where *n* is the length of arrays
     /// - Parameter other: Other array
     /// - Returns: New array
-    func objectsIntersection(with other: [Element]) -> [Element] {
+    @inlinable func objectsIntersection(with other: [Element]) -> [Element] {
         intersection(with: other, withHasher: { ObjectIdentifier($0) })
     }
     

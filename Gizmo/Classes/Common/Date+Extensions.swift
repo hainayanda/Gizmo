@@ -38,8 +38,8 @@ public extension Date {
     /// It will be negative if another date is less than this date
     /// - Parameter other: other date
     /// - Returns: time left to other date
-    func timeLeft(to other: Date) -> TimeInterval {
-        return other.timeIntervalSinceReferenceDate - timeIntervalSinceReferenceDate
+    @inlinable func timeLeft(to other: Date) -> TimeInterval {
+        other.timeIntervalSinceReferenceDate - timeIntervalSinceReferenceDate
     }
     
     /// Convert date to given string format
@@ -48,7 +48,7 @@ public extension Date {
     /// - Parameter format: Date string format
     /// - Parameter timeZone: timezone used, it will use NSTimeZone.default defaultly
     /// - Returns: Formatted String from this Date
-    func dateString(_ format: String, timeZone: TimeZone = NSTimeZone.default) -> String {
+    @inlinable func dateString(_ format: String, timeZone: TimeZone = NSTimeZone.default) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = timeZone
         dateFormatter.dateFormat = format
@@ -65,7 +65,7 @@ public extension Date {
     ///   - string: string with the given format
     ///   - format: Date string format
     ///   - timeZone: timezone used, it will use NSTimeZone.default defaultly
-    init?(_ string: String, format: String, timeZone: TimeZone = NSTimeZone.default) {
+    @inlinable init?(_ string: String, format: String, timeZone: TimeZone = NSTimeZone.default) {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = timeZone
         dateFormatter.dateFormat = format

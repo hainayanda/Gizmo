@@ -18,13 +18,13 @@ public extension UIEdgeInsets {
     /// - Parameters:
     ///   - vertical: Top and bottom insets
     ///   - horizontal: Left and right insets
-    init(verticals: CGFloat = .zero, horizontals: CGFloat = .zero) {
+    @inlinable init(verticals: CGFloat = .zero, horizontals: CGFloat = .zero) {
         self.init(top: verticals, left: horizontals, bottom: verticals, right: horizontals)
     }
     
     /// Create UIEdgeInsets with given insets
     /// - Parameter insets: All edge insets
-    init(insets: CGFloat) {
+    @inlinable init(insets: CGFloat) {
         self.init(top: insets, left: insets, bottom: insets, right: insets)
     }
 }
@@ -36,35 +36,35 @@ public extension UIEdgeInsets {
     /// Create new UIEdgeInsets increased by another insets
     /// - Parameter insets: Another insets
     /// - Returns: New UIEdgeInsets
-    func increased(by insets: UIEdgeInsets) -> UIEdgeInsets {
+    @inlinable func increased(by insets: UIEdgeInsets) -> UIEdgeInsets {
         self + insets
     }
     
     /// Create new UIEdgeInsets increased by another insets
     /// - Parameter insets: Another insets
     /// - Returns: New UIEdgeInsets
-    func increased(by insets: CGFloat) -> UIEdgeInsets {
+    @inlinable func increased(by insets: CGFloat) -> UIEdgeInsets {
         self + insets
     }
     
     /// Create new UIEdgeInsets decreased by another insets
     /// - Parameter insets: Another insets
     /// - Returns: New UIEdgeInsets
-    func decreased(by insets: UIEdgeInsets) -> UIEdgeInsets {
+    @inlinable func decreased(by insets: UIEdgeInsets) -> UIEdgeInsets {
         self - insets
     }
     
     /// Create new UIEdgeInsets decreased by another insets
     /// - Parameter insets: Another insets
     /// - Returns: New UIEdgeInsets
-    func decreased(by insets: CGFloat) -> UIEdgeInsets {
+    @inlinable func decreased(by insets: CGFloat) -> UIEdgeInsets {
         self - insets
     }
 }
 
 // MARK: Operator
 
-public func +(_ lhs: UIEdgeInsets, _ rhs: UIEdgeInsets) -> UIEdgeInsets {
+@inlinable public func +(_ lhs: UIEdgeInsets, _ rhs: UIEdgeInsets) -> UIEdgeInsets {
     UIEdgeInsets(
         top: lhs.top + rhs.top,
         left: lhs.left + rhs.left,
@@ -73,7 +73,7 @@ public func +(_ lhs: UIEdgeInsets, _ rhs: UIEdgeInsets) -> UIEdgeInsets {
     )
 }
 
-public func -(_ lhs: UIEdgeInsets, _ rhs: UIEdgeInsets) -> UIEdgeInsets {
+@inlinable public func -(_ lhs: UIEdgeInsets, _ rhs: UIEdgeInsets) -> UIEdgeInsets {
     UIEdgeInsets(
         top: lhs.top - rhs.top,
         left: lhs.left - rhs.left,
@@ -82,7 +82,7 @@ public func -(_ lhs: UIEdgeInsets, _ rhs: UIEdgeInsets) -> UIEdgeInsets {
     )
 }
 
-public func +(_ lhs: UIEdgeInsets, _ rhs: CGFloat) -> UIEdgeInsets {
+@inlinable public func +(_ lhs: UIEdgeInsets, _ rhs: CGFloat) -> UIEdgeInsets {
     UIEdgeInsets(
         top: lhs.top + rhs,
         left: lhs.left + rhs,
@@ -91,7 +91,7 @@ public func +(_ lhs: UIEdgeInsets, _ rhs: CGFloat) -> UIEdgeInsets {
     )
 }
 
-public func -(_ lhs: UIEdgeInsets, _ rhs: CGFloat) -> UIEdgeInsets {
+@inlinable public func -(_ lhs: UIEdgeInsets, _ rhs: CGFloat) -> UIEdgeInsets {
     UIEdgeInsets(
         top: lhs.top - rhs,
         left: lhs.left - rhs,
@@ -100,7 +100,7 @@ public func -(_ lhs: UIEdgeInsets, _ rhs: CGFloat) -> UIEdgeInsets {
     )
 }
 
-public func *(_ lhs: UIEdgeInsets, _ rhs: CGFloat) -> UIEdgeInsets {
+@inlinable public func *(_ lhs: UIEdgeInsets, _ rhs: CGFloat) -> UIEdgeInsets {
     UIEdgeInsets(
         top: lhs.top * rhs,
         left: lhs.left * rhs,
@@ -109,7 +109,7 @@ public func *(_ lhs: UIEdgeInsets, _ rhs: CGFloat) -> UIEdgeInsets {
     )
 }
 
-public func /(_ lhs: UIEdgeInsets, _ rhs: CGFloat) -> UIEdgeInsets {
+@inlinable public func /(_ lhs: UIEdgeInsets, _ rhs: CGFloat) -> UIEdgeInsets {
     UIEdgeInsets(
         top: lhs.top / rhs,
         left: lhs.left / rhs,

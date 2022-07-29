@@ -11,21 +11,21 @@ public typealias Radian = Float
 
 public extension Float {
     /// convert angle in Float to its radian value
-    var angleDegree: Radian {
+    @inlinable var angleDegree: Radian {
         .pi * (self / 180)
     }
 }
 
 public extension Double {
     /// convert angle in Double to its radian value
-    var angleDegree: Radian {
+    @inlinable var angleDegree: Radian {
         Float(self).angleDegree
     }
 }
 
 public extension Int {
     /// convert angle in Int to its radian value
-    var angleDegree: Radian {
+    @inlinable var angleDegree: Radian {
         Float(self).angleDegree
     }
 }

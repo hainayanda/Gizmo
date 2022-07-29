@@ -11,47 +11,47 @@ import UIKit
 
 public extension CACornerMask {
     
-    static var topLeft: CACornerMask { layerMinXMinYCorner }
+    @inlinable static var topLeft: CACornerMask { layerMinXMinYCorner }
 
-    static var topRight: CACornerMask { layerMaxXMinYCorner }
+    @inlinable static var topRight: CACornerMask { layerMaxXMinYCorner }
 
-    static var bottomLeft: CACornerMask { layerMinXMaxYCorner }
+    @inlinable static var bottomLeft: CACornerMask { layerMinXMaxYCorner }
 
-    static var bottomRight: CACornerMask { layerMaxXMaxYCorner }
+    @inlinable static var bottomRight: CACornerMask { layerMaxXMaxYCorner }
     
-    static var allTop: CACornerMask {
+    @inlinable static var allTop: CACornerMask {
         [topLeft, topRight]
     }
 
-    static var allLeft: CACornerMask {
+    @inlinable static var allLeft: CACornerMask {
         [topLeft, bottomLeft]
     }
 
-    static var allRight: CACornerMask {
+    @inlinable static var allRight: CACornerMask {
         [topRight, bottomRight]
     }
 
-    static var allBottom: CACornerMask {
+    @inlinable static var allBottom: CACornerMask {
         [bottomLeft, bottomRight]
     }
     
-    static var allButTopLeft: CACornerMask {
+    @inlinable static var allButTopLeft: CACornerMask {
         [topRight, bottomLeft, bottomRight]
     }
 
-    static var allButTopRight: CACornerMask {
+    @inlinable static var allButTopRight: CACornerMask {
         [topLeft, bottomLeft, bottomRight]
     }
 
-    static var allButBottomLeft: CACornerMask {
+    @inlinable static var allButBottomLeft: CACornerMask {
         [topLeft, topRight, bottomRight]
     }
 
-    static var allButBottomRight: CACornerMask {
+    @inlinable static var allButBottomRight: CACornerMask {
         [topLeft, topRight, bottomLeft]
     }
     
-    static var all: CACornerMask {
+    @inlinable static var all: CACornerMask {
         [topLeft, topRight, bottomLeft, bottomRight]
     }
 

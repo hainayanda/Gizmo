@@ -10,7 +10,7 @@ import Foundation
 public extension String {
     
     /// convert String to its base 64 encoded string
-    var asBase64: String {
+    @inlinable var asBase64: String {
         Data(self.utf8).base64EncodedString()
     }
     

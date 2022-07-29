@@ -20,7 +20,7 @@ public extension Collection where Indices.Iterator.Element == Index {
 }
 
 public extension Collection {
-    var isNotEmpty: Bool {
+    @inlinable var isNotEmpty: Bool {
         !isEmpty
     }
 }

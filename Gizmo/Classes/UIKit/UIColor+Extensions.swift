@@ -13,47 +13,42 @@ public extension UIColor {
     
     /// Hex string representation of the color
     /// eg: #ffffff
-    var hex: String {
+    @inlinable var hex: String {
         String(format: "#%02lX%02lX%02lX", redInt, greenInt, blueInt)
     }
     
     /// Red value of the color from 0 to 255
-    var redInt: Int {
+    @inlinable var redInt: Int {
         lroundf(Float(red * 255))
     }
     
     /// Green value of the color from 0 to 255
-    var greenInt: Int {
+    @inlinable var greenInt: Int {
         lroundf(Float(green * 255))
     }
     
     /// Blue value of the color from 0 to 255
-    var blueInt: Int {
+    @inlinable var blueInt: Int {
         lroundf(Float(blue * 255))
     }
     
     /// Red value of the color from 0 to 1
     var red: CGFloat {
-        guard let components = cgColor.components, components.isNotEmpty else { return 0 }
-        return components[0]
+        colorComponent(at: 0)
     }
     
     /// Green value of the color from 0 to 1
     var green: CGFloat {
-        guard let components = cgColor.components, components.isNotEmpty else { return 0 }
-        guard components.count > 2 else { return components[0] }
-        return components[1]
+        colorComponent(at: 1)
     }
     
     /// Blue value of the color from 0 to 1
     var blue: CGFloat {
-        guard let components = cgColor.components, components.isNotEmpty else { return 0 }
-        guard components.count > 2 else { return components[0] }
-        return components[safe: 2] ?? 0
+        colorComponent(at: 2)
     }
     
     /// Alpha value of the color from 0 to 1
-    var alpha: CGFloat {
+    @inlinable var alpha: CGFloat {
         cgColor.alpha
     }
     
@@ -107,13 +102,24 @@ public extension UIColor {
     /// - Parameters:
     ///   -  hex: Hex representation of the color
     ///   -  alpha: Alpha value from 0 to 1. Default 1
-    convenience init(hex: Int, alpha: CGFloat = 1) {
+    @inlinable convenience init(hex: Int, alpha: CGFloat = 1) {
         self.init(
             red: ((hex >> 16) & 0xFF),
             green: ((hex >> 8) & 0xFF),
             blue: (hex & 0xFF),
             alpha: alpha
         )
+    }
+}
+
+// MARK: Internal
+
+extension UIColor {
+    
+    func colorComponent(at index: Int) -> CGFloat {
+        guard let components = cgColor.components, components.isNotEmpty else { return 0 }
+        guard components.count > 2 else { return components[0] }
+        return components[safe: index] ?? 0
     }
 }
 #endif
