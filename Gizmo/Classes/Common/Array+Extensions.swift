@@ -15,7 +15,7 @@ public extension Array {
     /// - Complexity: O(1)
     /// - Parameter element: Element added
     /// - Returns: New array with added element
-    func added(with element: Element) -> [Element] {
+    @inlinable func added(with element: Element) -> [Element] {
         mutatingWithNewArray { $0.append(element) }
     }
     
@@ -23,7 +23,7 @@ public extension Array {
     /// - Complexity: O(*m*) on average, where *m* is the length of sequence
     /// - Parameter sequence: Sequence of the elements
     /// - Returns: New array with added sequence
-    func added<S: Sequence>(withContentsOf sequence: S) -> [Element] where S.Element == Element {
+    @inlinable func added<S: Sequence>(withContentsOf sequence: S) -> [Element] where S.Element == Element {
         mutatingWithNewArray { $0.append(contentsOf: sequence) }
     }
     
@@ -31,7 +31,7 @@ public extension Array {
     /// - Complexity: O(*m*) on average, where *m* is the length of elements
     /// - Parameter elements: Elements added
     /// - Returns: New array with added elements
-    func added(with elements: Element...) -> [Element] {
+    @inlinable func added(with elements: Element...) -> [Element] {
         added(withContentsOf: elements)
     }
     
@@ -41,7 +41,7 @@ public extension Array {
     ///   - index: Index of the new element
     ///   - element: Element added
     /// - Returns: New array with added element
-    func added(at index: Index, with element: Element) -> [Element] {
+    @inlinable func added(at index: Index, with element: Element) -> [Element] {
         mutatingWithNewArray { $0.insert(element, at: index)}
     }
     
@@ -51,7 +51,7 @@ public extension Array {
     ///   - index: Index of the new element
     ///   - collection: Collection of the elements
     /// - Returns: New array with added collection
-    func added<C: Collection>(at index: Index, withContentsOf collection: C) -> [Element] where C.Element == Element {
+    @inlinable func added<C: Collection>(at index: Index, withContentsOf collection: C) -> [Element] where C.Element == Element {
         mutatingWithNewArray { $0.insert(contentsOf: collection, at: index)}
     }
     
@@ -61,7 +61,7 @@ public extension Array {
     ///   - index: Index of the new elements
     ///   - elements: Elements added
     /// - Returns: New array with added elements
-    func added(at index: Index, with elements: Element...) -> [Element] {
+    @inlinable func added(at index: Index, with elements: Element...) -> [Element] {
         added(at: index, withContentsOf: elements)
     }
 }
@@ -72,7 +72,7 @@ public extension Array where Element: Equatable {
     /// - Complexity: O(*n*), where *n* is the length of arrays
     /// - Parameter element: Element added
     /// - Returns: New array with added element
-    func addedIfUnique(with element: Element) -> [Element] {
+    @inlinable func addedIfUnique(with element: Element) -> [Element] {
         guard !contains(element) else { return self }
         return added(with: element)
     }
@@ -91,7 +91,7 @@ public extension Array where Element: Equatable {
     /// - Complexity: O(*n* *m*), where *n* is the length of arrays and *m* is length of elements
     /// - Parameter elements: Elements added
     /// - Returns: New array with added elements
-    func addedIfUnique(with elements: Element...) -> [Element] {
+    @inlinable func addedIfUnique(with elements: Element...) -> [Element] {
         addedIfUnique(withContentsOf: elements)
     }
     
@@ -101,7 +101,7 @@ public extension Array where Element: Equatable {
     ///   - index: Index of the new element
     ///   - element: Element added
     /// - Returns: New array with added element
-    func addedIfUnique(at index: Index, with element: Element) -> [Element] {
+    @inlinable func addedIfUnique(at index: Index, with element: Element) -> [Element] {
         guard !contains(element) else { return self }
         return added(at: index, with: element)
     }
@@ -127,7 +127,7 @@ public extension Array where Element: Equatable {
     ///   - index: Index of the new elements
     ///   - elements: Elements added
     /// - Returns: New array with added elements
-    func addedIfUnique(at index: Index, with elements: Element...) -> [Element] {
+    @inlinable func addedIfUnique(at index: Index, with elements: Element...) -> [Element] {
         addedIfUnique(at: index, withContentsOf: elements)
     }
 }
@@ -138,7 +138,7 @@ public extension Array where Element: AnyObject {
     /// - Complexity: O(*n*) where *n* is the length of arrays
     /// - Parameter element: Element added
     /// - Returns: New array with added element
-    func addedIfUniqueInstance(with element: Element) -> [Element] {
+    @inlinable func addedIfUniqueInstance(with element: Element) -> [Element] {
         guard !contains(where: { $0 === element }) else { return self }
         return added(with: element)
     }
@@ -166,7 +166,7 @@ public extension Array where Element: AnyObject {
     /// - Complexity: O(*n* + *m*) at average, where *n* is the length of arrays and *m* is length of sequence
     /// - Parameter elements: Elements added
     /// - Returns: New array with added elements
-    func addedIfUniqueInstance(with elements: Element...) -> [Element] {
+    @inlinable func addedIfUniqueInstance(with elements: Element...) -> [Element] {
         addedIfUniqueInstance(withContentsOf: elements)
     }
     
@@ -176,7 +176,7 @@ public extension Array where Element: AnyObject {
     ///   - index: Index of the new element
     ///   - element: Element added
     /// - Returns: New array with added element
-    func addedIfUniqueInstance(at index: Index, with element: Element) -> [Element] {
+    @inlinable func addedIfUniqueInstance(at index: Index, with element: Element) -> [Element] {
         guard !contains(where: { $0 === element }) else { return self }
         return added(at: index, with: element)
     }
@@ -210,7 +210,7 @@ public extension Array where Element: AnyObject {
     ///   - index: Index of the new elements
     ///   - elements: Elements added
     /// - Returns: New array with added elements
-    func addedIfUniqueInstance(at index: Index, with elements: Element...) -> [Element] {
+    @inlinable func addedIfUniqueInstance(at index: Index, with elements: Element...) -> [Element] {
         addedIfUniqueInstance(at: index, withContentsOf: elements)
     }
 }
@@ -233,7 +233,7 @@ public extension Array {
     /// - Complexity: O(*n*) where *n* is the length of arrays
     /// - Parameter found: Closure to check element needs to be removed
     /// - Returns: New array with removed element
-    func removed(ifFound found: (Element) -> Bool) -> [Element] {
+    @inlinable func removed(ifFound found: (Element) -> Bool) -> [Element] {
         mutatingWithNewArray { $0.removeAll(where: found) }
     }
     
@@ -261,7 +261,7 @@ public extension Array where Element: Equatable {
     /// - Complexity: O(*n* *m*) where *n* is the length of arrays and *m* is length of sequence
     /// - Parameter elements: elements to be removed
     /// - Returns: New array with removed element
-    func removed(_ elements: Element...) -> [Element] {
+    @inlinable func removed(_ elements: Element...) -> [Element] {
         removed(elements)
     }
 }
@@ -295,7 +295,7 @@ public extension Array where Element: AnyObject {
     /// - Complexity: O(*n* + *m*) at average, where *n* is the length of arrays and *m* is length of sequence
     /// - Parameter elements: elements to be removed
     /// - Returns: New array with removed element
-    func removedSameInstance(_ elements: Element...) -> [Element] {
+    @inlinable func removedSameInstance(_ elements: Element...) -> [Element] {
         removedSameInstance(in: elements)
     }
 }
@@ -609,7 +609,7 @@ struct IntermediateHashable<Element>: Hashable {
         self.element = element
     }
     
-    func hash(into hasher: inout Hasher) {
+    @inlinable func hash(into hasher: inout Hasher) {
         hasher.combine(hashable)
     }
     

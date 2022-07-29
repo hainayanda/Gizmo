@@ -86,7 +86,7 @@ public extension UIColor {
     ///   - green: Green int value from 0 to 255
     ///   - blue: Blue int value from 0 to 255
     ///   - alpha: Alpha value from 0 to 1. Default 1
-    convenience init(red: Int, green: Int, blue: Int, alpha: CGFloat = 1) {
+    @inlinable convenience init(red: Int, green: Int, blue: Int, alpha: CGFloat = 1) {
         let cgRed = CGFloat(max(min(red, 255), 0))
         let cgGreen = CGFloat(max(min(green, 255), 0))
         let cgBlue = CGFloat(max(min(blue, 255), 0))

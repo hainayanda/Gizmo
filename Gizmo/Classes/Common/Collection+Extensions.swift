@@ -29,7 +29,7 @@ public extension Collection {
 
 extension Collection where Indices.Iterator.Element == Index {
     
-    func whenIndexIsSafe<Return>(for index: Index, do work: () -> Return) -> Return? {
+    @inlinable func whenIndexIsSafe<Return>(for index: Index, do work: () -> Return) -> Return? {
         guard indices.contains(index) else { return nil }
         return work()
     }
