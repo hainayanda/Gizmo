@@ -12,18 +12,18 @@ import UIKit
 // MARK: Init
 
 public extension UIEdgeInsets {
-    init(vertical: CGFloat) {
-        self.init(top: vertical, left: .zero, bottom: vertical, right: .zero)
+    
+    /// Create UIEdgeInsets with given verticals and horizontals insets
+    /// Default value of verticals and horizontals is zero
+    /// - Parameters:
+    ///   - vertical: Top and bottom insets
+    ///   - horizontal: Left and right insets
+    init(verticals: CGFloat = .zero, horizontals: CGFloat = .zero) {
+        self.init(top: verticals, left: horizontals, bottom: verticals, right: horizontals)
     }
     
-    init(horizontal: CGFloat) {
-        self.init(top: .zero, left: horizontal, bottom: .zero, right: horizontal)
-    }
-    
-    init(vertical: CGFloat, horizontal: CGFloat) {
-        self.init(top: vertical, left: horizontal, bottom: vertical, right: horizontal)
-    }
-    
+    /// Create UIEdgeInsets with given insets
+    /// - Parameter insets: All edge insets
     init(insets: CGFloat) {
         self.init(top: insets, left: insets, bottom: insets, right: insets)
     }
@@ -33,18 +33,30 @@ public extension UIEdgeInsets {
 
 public extension UIEdgeInsets {
     
+    /// Create new UIEdgeInsets increased by another insets
+    /// - Parameter insets: Another insets
+    /// - Returns: New UIEdgeInsets
     func increased(by insets: UIEdgeInsets) -> UIEdgeInsets {
         self + insets
     }
     
+    /// Create new UIEdgeInsets increased by another insets
+    /// - Parameter insets: Another insets
+    /// - Returns: New UIEdgeInsets
     func increased(by insets: CGFloat) -> UIEdgeInsets {
         self + insets
     }
     
+    /// Create new UIEdgeInsets decreased by another insets
+    /// - Parameter insets: Another insets
+    /// - Returns: New UIEdgeInsets
     func decreased(by insets: UIEdgeInsets) -> UIEdgeInsets {
         self - insets
     }
     
+    /// Create new UIEdgeInsets decreased by another insets
+    /// - Parameter insets: Another insets
+    /// - Returns: New UIEdgeInsets
     func decreased(by insets: CGFloat) -> UIEdgeInsets {
         self - insets
     }
