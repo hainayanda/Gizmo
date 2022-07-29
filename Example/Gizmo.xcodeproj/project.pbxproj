@@ -17,6 +17,7 @@
 		BB3605232892BB8200D288C4 /* RadianExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3605222892BB8200D288C4 /* RadianExtensionsSpec.swift */; };
 		BB3605262892BDC400D288C4 /* CGSizeExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3605252892BDC400D288C4 /* CGSizeExtensionsSpec.swift */; };
 		BB3605282892C0A700D288C4 /* CGRectExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3605272892C0A700D288C4 /* CGRectExtensionsSpec.swift */; };
+		BB36052A28935F8B00D288C4 /* CACornerMaskExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36052928935F8B00D288C4 /* CACornerMaskExtensionsSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		BB3605222892BB8200D288C4 /* RadianExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadianExtensionsSpec.swift; sourceTree = "<group>"; };
 		BB3605252892BDC400D288C4 /* CGSizeExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtensionsSpec.swift; sourceTree = "<group>"; };
 		BB3605272892C0A700D288C4 /* CGRectExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtensionsSpec.swift; sourceTree = "<group>"; };
+		BB36052928935F8B00D288C4 /* CACornerMaskExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CACornerMaskExtensionsSpec.swift; sourceTree = "<group>"; };
 		F2C13134AD836193EA375B7B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 			children = (
 				BB3605252892BDC400D288C4 /* CGSizeExtensionsSpec.swift */,
 				BB3605272892C0A700D288C4 /* CGRectExtensionsSpec.swift */,
+				BB36052928935F8B00D288C4 /* CACornerMaskExtensionsSpec.swift */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				BB36051728911A5100D288C4 /* DateExtensionsSpec.swift in Sources */,
 				BB360521289265AD00D288C4 /* ArrayExtensionsSpec.swift in Sources */,
 				BB3604F328902C6F00D288C4 /* CollectionExtensionsSpec.swift in Sources */,
+				BB36052A28935F8B00D288C4 /* CACornerMaskExtensionsSpec.swift in Sources */,
 				BB3605262892BDC400D288C4 /* CGSizeExtensionsSpec.swift in Sources */,
 				BB360519289250CB00D288C4 /* DictionaryExtensionsSpec.swift in Sources */,
 				BB36051D2892565700D288C4 /* StringExtensionsSpec.swift in Sources */,
