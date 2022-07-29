@@ -16,6 +16,14 @@ import Gizmo
 class CGRectExtensionsSpec: QuickSpec {
     
     override func spec() {
+        it("should calculate area") {
+            let rect = CGRect(origin: .zero, size: CGSize(width: 4, height: 6))
+            expect(rect.area).to(equal(24))
+        }
+        it("should calculate max corner radius") {
+            let rect = CGRect(origin: .zero, size: CGSize(width: 4, height: 6))
+            expect(rect.maxCornerRadius).to(equal(2))
+        }
         it("should calculate center") {
             let rect = CGRect(origin: .zero, size: CGSize(sides: 4))
             expect(rect.center).to(equal(CGPoint(x: 2, y: 2)))

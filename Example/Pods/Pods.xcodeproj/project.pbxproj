@@ -107,6 +107,7 @@
 		BB3605092890CEAB00D288C4 /* Radian+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3605082890CEAB00D288C4 /* Radian+Extensions.swift */; };
 		BB36050D2890CFFF00D288C4 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36050C2890CFFF00D288C4 /* TimeInterval+Extensions.swift */; };
 		BB36050F2890D07000D288C4 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36050E2890D07000D288C4 /* String+Extensions.swift */; };
+		BB3605132890D2C200D288C4 /* ClosureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3605122890D2C200D288C4 /* ClosureHelper.swift */; };
 		BD3ABAC28025564DCF2E6C12009435DF /* CwlMachBadInstructionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6A8AE2D5EF989F29A4FFB4EB7D52A8 /* CwlMachBadInstructionHandler.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		BF62525E5628A9F7604BA8479691318C /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E2AF01C07390467B2A032C1081912 /* BeLogical.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		C03116C765F1A8893559730965ECBAD8 /* Nimble-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC0C54E76B49BF11F64E24F0931846C /* Nimble-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
