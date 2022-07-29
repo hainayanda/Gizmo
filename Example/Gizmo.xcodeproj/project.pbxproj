@@ -19,6 +19,7 @@
 		BB3605282892C0A700D288C4 /* CGRectExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3605272892C0A700D288C4 /* CGRectExtensionsSpec.swift */; };
 		BB36052A28935F8B00D288C4 /* CACornerMaskExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36052928935F8B00D288C4 /* CACornerMaskExtensionsSpec.swift */; };
 		BB36052C289385DB00D288C4 /* UIEdgeExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36052B289385DB00D288C4 /* UIEdgeExtensionsSpec.swift */; };
+		BB36052E2893881100D288C4 /* UIResponderExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36052D2893881100D288C4 /* UIResponderExtensionsSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		BB3605272892C0A700D288C4 /* CGRectExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtensionsSpec.swift; sourceTree = "<group>"; };
 		BB36052928935F8B00D288C4 /* CACornerMaskExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CACornerMaskExtensionsSpec.swift; sourceTree = "<group>"; };
 		BB36052B289385DB00D288C4 /* UIEdgeExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeExtensionsSpec.swift; sourceTree = "<group>"; };
+		BB36052D2893881100D288C4 /* UIResponderExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponderExtensionsSpec.swift; sourceTree = "<group>"; };
 		F2C13134AD836193EA375B7B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 				BB3605272892C0A700D288C4 /* CGRectExtensionsSpec.swift */,
 				BB36052928935F8B00D288C4 /* CACornerMaskExtensionsSpec.swift */,
 				BB36052B289385DB00D288C4 /* UIEdgeExtensionsSpec.swift */,
+				BB36052D2893881100D288C4 /* UIResponderExtensionsSpec.swift */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				BB3604F328902C6F00D288C4 /* CollectionExtensionsSpec.swift in Sources */,
 				BB36052A28935F8B00D288C4 /* CACornerMaskExtensionsSpec.swift in Sources */,
 				BB3605262892BDC400D288C4 /* CGSizeExtensionsSpec.swift in Sources */,
+				BB36052E2893881100D288C4 /* UIResponderExtensionsSpec.swift in Sources */,
 				BB360519289250CB00D288C4 /* DictionaryExtensionsSpec.swift in Sources */,
 				BB36051D2892565700D288C4 /* StringExtensionsSpec.swift in Sources */,
 			);
