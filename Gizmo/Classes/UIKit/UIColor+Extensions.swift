@@ -66,10 +66,11 @@ public extension UIColor {
     convenience init?(hex: String, alpha: CGFloat = 1) {
         var formattedHex: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
-        if (formattedHex.hasPrefix("#")) {
+        if formattedHex.hasPrefix("#") {
             formattedHex.remove(at: formattedHex.startIndex)
         }
-        if ((formattedHex.count) != 6) {
+        
+        if formattedHex.count != 6 {
             return nil
         }
         
