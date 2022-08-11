@@ -364,6 +364,16 @@ public extension Array where Element: Hashable {
     }
 }
 
+public extension Array where Element: Equatable {
+    
+    /// Create new array with unique element coming from this array
+    /// The order of the element will still be the same
+    /// - Complexity: O(*n*^2) at average,  where *n* is the length of base array
+    @inlinable var unique: [Element] {
+        uniqued(where: ==)
+    }
+}
+
 // MARK: Difference
 
 public extension Array {
@@ -547,6 +557,49 @@ public extension Array where Element: Hashable {
     
     /// Returns a new array with the elements that are common to both this array and the given array.
     /// - Complexity: O(*n*) on average, where *n* is the length of arrays
+    /// - Parameter other: Other array
+    /// - Returns: New array
+    @inlinable func present(in other: [Element]) -> [Element] {
+        intersection(with: other)
+    }
+}
+
+public extension Array where Element: Equatable {
+    
+    /// Returns a new array with the elements that are either in this array or in the given sequence, but not in both.
+    /// - Complexity: O(*n*^2 + *m*^2 + *m*), where *n* is the length of arrays and *m* is length of other array
+    /// - Parameter other: Other Array
+    /// - Returns: New array
+    @inlinable func symetricDifference(with other: [Element]) -> [Element] {
+        symetricDifference(with: other, where: ==)
+    }
+    
+    /// Returns a new array containing the elements of this array that do not occur in the given array.
+    /// - Complexity: O(*n*^2), where *n* is the length of arrays
+    /// - Parameter other: Other array
+    /// - Returns: New array
+    @inlinable func substracted(by other: [Element]) -> [Element] {
+        substracted(by: other, where: ==)
+    }
+    
+    /// Returns a new array containing the elements of this array that do not occur in the given array.
+    /// - Complexity: O(*n*^2), where *n* is the length of arrays
+    /// - Parameter other: Other array
+    /// - Returns: New array
+    @inlinable func notPresent(in other: [Element]) -> [Element] {
+        substracted(by: other)
+    }
+    
+    /// Returns a new array with the elements that are common to both this array and the given array.
+    /// - Complexity: O(*n*^2), where *n* is the length of arrays
+    /// - Parameter other: Other array
+    /// - Returns: New array
+    @inlinable func intersection(with other: [Element]) -> [Element] {
+        intersection(with: other, where: ==)
+    }
+    
+    /// Returns a new array with the elements that are common to both this array and the given array.
+    /// - Complexity: O(*n*^2), where *n* is the length of arrays
     /// - Parameter other: Other array
     /// - Returns: New array
     @inlinable func present(in other: [Element]) -> [Element] {
