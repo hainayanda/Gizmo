@@ -7,4 +7,5 @@ target 'Gizmo_Tests' do
   
   pod 'Quick', '~> 5.0.1'
   pod 'Nimble', '~> 10.0.0'
+  pod 'Fakery'
 end

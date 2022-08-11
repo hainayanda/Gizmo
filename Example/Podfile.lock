@@ -1,15 +1,18 @@
 PODS:
+  - Fakery (5.1.0)
   - Gizmo (0.1.0)
   - Nimble (10.0.0)
   - Quick (5.0.1)
 
 DEPENDENCIES:
+  - Fakery
   - Gizmo (from `../`)
   - Nimble (~> 10.0.0)
   - Quick (~> 5.0.1)
 
 SPEC REPOS:
   trunk:
+    - Fakery
     - Nimble
     - Quick
 
@@ -18,10 +21,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Fakery: a90caff00ca5cacde6c161c3eafc72314a03d34d
   Gizmo: 1444dc796b21a374092156744ccaac63f10dae09
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
 
-PODFILE CHECKSUM: 0ee2a06dbee2772fb4cddd7491c48b56395ad2a7
+PODFILE CHECKSUM: f180d872715caf81da21225b670dcbd4b6d52e13
 
 COCOAPODS: 1.11.3
