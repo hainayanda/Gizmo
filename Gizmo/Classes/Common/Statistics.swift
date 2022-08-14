@@ -141,6 +141,9 @@ public extension Sequence where Element: Equatable {
 }
 
 public extension Sequence where Element: Hashable {
+    
+    /// Return Dictionary of Element and Int which represent the element count in this array
+    /// - Returns: Dictionary of Element and Int
     @inlinable func groupedByFrequency() -> [Element: Int] {
         reduce([:]) { partialResult, element in
             var result = partialResult
