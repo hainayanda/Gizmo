@@ -7,9 +7,9 @@ Gizmo is a set of common utilities for Swift
 ![build](https://github.com/hainayanda/Gizmo/workflows/build/badge.svg)
 ![test](https://github.com/hainayanda/Gizmo/workflows/test/badge.svg)
 [![SwiftPM Compatible](https://img.shields.io/badge/SwiftPM-Compatible-brightgreen)](https://swift.org/package-manager/)
-[![Version](https://img.shields.io/cocoapods/v/Gizmo.svg?style=flat)](https://cocoapods.org/pods/Draftsman)
-[![License](https://img.shields.io/cocoapods/l/Gizmo.svg?style=flat)](https://cocoapods.org/pods/Draftsman)
-[![Platform](https://img.shields.io/cocoapods/p/Draftsman.svg?style=flat)](https://cocoapods.org/pods/Draftsman)
+[![Version](https://img.shields.io/cocoapods/v/Gizmo.svg?style=flat)](https://cocoapods.org/pods/Gizmo)
+[![License](https://img.shields.io/cocoapods/l/Gizmo.svg?style=flat)](https://cocoapods.org/pods/Gizmo)
+[![Platform](https://img.shields.io/cocoapods/p/Gizmo.svg?style=flat)](https://cocoapods.org/pods/Gizmo)
 
 ## Requirements
 
