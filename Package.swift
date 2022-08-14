@@ -18,9 +18,9 @@ let package = Package(
     ],
     dependencies: [
         // uncomment code below to test
-       .package(name: "Fakery", url: "https://github.com/vadymmarkov/Fakery", from: "5.1.0"))
-       .package(url: "https://github.com/Quick/Quick.git", from: "5.0.1"),
-       .package(url: "https://github.com/Quick/Nimble.git", from: "10.0.0")
+//       .package(url: "https://github.com/Quick/Quick.git", from: "5.0.1"),
+//       .package(url: "https://github.com/Quick/Nimble.git", from: "10.0.0"),
+//       .package(name: "Fakery", url: "https://github.com/vadymmarkov/Fakery", from: "5.1.0")
     ],
     targets: [
         .target(
@@ -29,13 +29,13 @@ let package = Package(
             path: "Gizmo/Classes"
         ),
         // uncomment code below to test
-       .testTarget(
-           name: "GizmoTests",
-           dependencies: [
-               "Gizmo", "Quick", "Nimble", "Fakery"
-           ],
-           path: "Example/Tests",
-           exclude: ["Info.plist"]
-       )
+//       .testTarget(
+//           name: "GizmoTests",
+//           dependencies: [
+//               "Gizmo", "Quick", "Nimble", "Fakery"
+//           ],
+//           path: "Example/Tests",
+//           exclude: ["Info.plist"]
+//       )
     ]
 )
