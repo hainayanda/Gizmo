@@ -87,9 +87,9 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				BB3605242892BD6E00D288C4 /* UIKit */,
 				BB3605152890EF0100D288C4 /* Common */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				BB3605242892BD6E00D288C4 /* UIKit */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -129,10 +129,10 @@
 				BB36051628911A5100D288C4 /* DateExtensionsSpec.swift */,
 				BB360518289250CB00D288C4 /* DictionaryExtensionsSpec.swift */,
 				BB3605222892BB8200D288C4 /* RadianExtensionsSpec.swift */,
-				BB36051C2892565700D288C4 /* StringExtensionsSpec.swift */,
-				BB72F0AC2898DECF0056B901 /* UniqueSequenceSpec.swift */,
 				BB72F0B0289A34380056B901 /* StatisticsSpec.swift */,
+				BB36051C2892565700D288C4 /* StringExtensionsSpec.swift */,
 				BB3B978028A7487600423EE1 /* TimeZoneSpec.swift */,
+				BB72F0AC2898DECF0056B901 /* UniqueSequenceSpec.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";

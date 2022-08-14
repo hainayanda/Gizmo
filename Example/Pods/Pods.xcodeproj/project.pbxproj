@@ -639,8 +639,8 @@
 				0B932F6E9227ABA3896605BF4A2DF440 /* Statistics.swift */,
 				E3C0AE7CB6C97FF67DC35E2C20B2CAE3 /* String+Extensions.swift */,
 				68119EF8FE358E10ACE7777E5BB748D2 /* TimeInterval+Extensions.swift */,
-				23EE6C96647401B487201E17042E9C98 /* UniqueHashableSequence.swift */,
 				BB3B977E28A744A800423EE1 /* TimeZone+Extensions.swift */,
+				23EE6C96647401B487201E17042E9C98 /* UniqueHashableSequence.swift */,
 			);
 			name = Common;
 			path = Gizmo/Classes/Common;
