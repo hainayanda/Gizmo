@@ -47,11 +47,11 @@ class DateExtensionsSpec: QuickSpec {
             expect(date.dateString("dd MMM yyyy", timeZone: .gmt)).to(equal("10 May 1991"))
         }
         it("should create date from string") {
-            guard let date = Date("10 May 1991", format: "dd MMM yyyy") else {
+            guard let date = Date("10 May 1991", format: "dd MMM yyyy", timeZone: .gmt) else {
                 fail("fail to create date")
                 return
             }
-            expect(date.timeIntervalSince1970).to(equal(673808400))
+            expect(date.timeIntervalSince1970).to(equal(673833600))
         }
         it("should return right second") {
             let unixSeconds = 673833600
