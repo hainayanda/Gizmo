@@ -14,7 +14,7 @@ Gizmo is a set of common utilities for Swift
 ## Requirements
 
 - Swift 5.5 or higher
-- iOS 12.0 or higher
+- iOS 11.0 or higher
 - XCode 13 or higher
 
 ## Installation
