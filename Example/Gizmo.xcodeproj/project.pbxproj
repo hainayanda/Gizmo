@@ -21,6 +21,7 @@
 		BB36052C289385DB00D288C4 /* UIEdgeExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36052B289385DB00D288C4 /* UIEdgeExtensionsSpec.swift */; };
 		BB36052E2893881100D288C4 /* UIResponderExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36052D2893881100D288C4 /* UIResponderExtensionsSpec.swift */; };
 		BB36053028938C3300D288C4 /* UIColorExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36052F28938C3300D288C4 /* UIColorExtensionsSpec.swift */; };
+		BB3B978128A7487600423EE1 /* TimeZoneSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B978028A7487600423EE1 /* TimeZoneSpec.swift */; };
 		BB72F0AD2898DECF0056B901 /* UniqueSequenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB72F0AC2898DECF0056B901 /* UniqueSequenceSpec.swift */; };
 		BB72F0B1289A34380056B901 /* StatisticsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB72F0B0289A34380056B901 /* StatisticsSpec.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		BB36052B289385DB00D288C4 /* UIEdgeExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeExtensionsSpec.swift; sourceTree = "<group>"; };
 		BB36052D2893881100D288C4 /* UIResponderExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponderExtensionsSpec.swift; sourceTree = "<group>"; };
 		BB36052F28938C3300D288C4 /* UIColorExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensionsSpec.swift; sourceTree = "<group>"; };
+		BB3B978028A7487600423EE1 /* TimeZoneSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneSpec.swift; sourceTree = "<group>"; };
 		BB72F0AC2898DECF0056B901 /* UniqueSequenceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueSequenceSpec.swift; sourceTree = "<group>"; };
 		BB72F0B0289A34380056B901 /* StatisticsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsSpec.swift; sourceTree = "<group>"; };
 		F2C13134AD836193EA375B7B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				BB36051C2892565700D288C4 /* StringExtensionsSpec.swift */,
 				BB72F0AC2898DECF0056B901 /* UniqueSequenceSpec.swift */,
 				BB72F0B0289A34380056B901 /* StatisticsSpec.swift */,
+				BB3B978028A7487600423EE1 /* TimeZoneSpec.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				BB72F0B1289A34380056B901 /* StatisticsSpec.swift in Sources */,
 				BB3605232892BB8200D288C4 /* RadianExtensionsSpec.swift in Sources */,
 				BB3605282892C0A700D288C4 /* CGRectExtensionsSpec.swift in Sources */,
+				BB3B978128A7487600423EE1 /* TimeZoneSpec.swift in Sources */,
 				BB36051F2892579900D288C4 /* ClosureHelperSpec.swift in Sources */,
 				BB36052C289385DB00D288C4 /* UIEdgeExtensionsSpec.swift in Sources */,
 				BB36051728911A5100D288C4 /* DateExtensionsSpec.swift in Sources */,
