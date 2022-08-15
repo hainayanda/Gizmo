@@ -18,6 +18,11 @@ public extension CGSize {
     /// Max corner radius allowed for size
     @inlinable var maxCornerRadius: CGFloat { min(width, height) / 2 }
     
+    /// Return `True` if the value is valid for UI size
+    @inlinable var isValidUISize: Bool {
+        width.isValidUIDimension && height.isValidUIDimension
+    }
+    
     /// Create new reduced size by the given insets
     /// - Parameter inset: Insets that will reduce the size
     /// - Returns: Reduced size
