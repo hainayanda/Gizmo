@@ -23,10 +23,10 @@ class CGSizeExtensionsSpec: QuickSpec {
             expect(CGSize(width: 2, height: 4).maxCornerRadius).to(equal(1))
         }
         it("should reduced size by insets") {
-            expect(CGSize(width: 3, height: 5).reduced(by: .init(insets: 1))).to(equal(CGSize(width: 1, height: 3)))
+            expect(CGSize(width: 3, height: 5).reduced(by: .init(edges: 1))).to(equal(CGSize(width: 1, height: 3)))
         }
         it("should enlarged size by insets") {
-            expect(CGSize(width: 3, height: 5).enlarged(by: .init(insets: 1))).to(equal(CGSize(width: 5, height: 7)))
+            expect(CGSize(width: 3, height: 5).enlarged(by: .init(edges: 1))).to(equal(CGSize(width: 5, height: 7)))
         }
         it("should add two size") {
             expect(CGSize(sides: 2) + CGSize(sides: 3)).to(equal(CGSize(sides: 5)))

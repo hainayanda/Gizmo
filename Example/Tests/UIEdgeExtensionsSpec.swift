@@ -22,39 +22,39 @@ class UIEdgeExtensionsSpec: QuickSpec {
             expect(UIEdgeInsets(horizontals: 20)).to(equal(UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)))
         }
         it("should create UIEdgeInsets using one insets") {
-            expect(UIEdgeInsets(insets: 10)).to(equal(UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)))
+            expect(UIEdgeInsets(edges: 10)).to(equal(UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)))
         }
         it("should increase insets by insets") {
-            let increased = UIEdgeInsets(insets: 10).increased(by: UIEdgeInsets(insets: 5))
-            expect(increased).to(equal(UIEdgeInsets(insets: 15)))
+            let increased = UIEdgeInsets(edges: 10).increased(by: UIEdgeInsets(edges: 5))
+            expect(increased).to(equal(UIEdgeInsets(edges: 15)))
         }
         it("should increase insets by insets") {
-            let increased = UIEdgeInsets(insets: 10).increased(by: 5)
-            expect(increased).to(equal(UIEdgeInsets(insets: 15)))
+            let increased = UIEdgeInsets(edges: 10).increased(by: 5)
+            expect(increased).to(equal(UIEdgeInsets(edges: 15)))
         }
         it("should increase insets by insets") {
-            let decreased = UIEdgeInsets(insets: 10).decreased(by: UIEdgeInsets(insets: 5))
-            expect(decreased).to(equal(UIEdgeInsets(insets: 5)))
+            let decreased = UIEdgeInsets(edges: 10).decreased(by: UIEdgeInsets(edges: 5))
+            expect(decreased).to(equal(UIEdgeInsets(edges: 5)))
         }
         it("should increase insets by insets") {
-            let decreased = UIEdgeInsets(insets: 10).decreased(by: 5)
-            expect(decreased).to(equal(UIEdgeInsets(insets: 5)))
+            let decreased = UIEdgeInsets(edges: 10).decreased(by: 5)
+            expect(decreased).to(equal(UIEdgeInsets(edges: 5)))
         }
         it("should do arithmatics operation with two insets") {
-            let added = UIEdgeInsets(insets: 10) + UIEdgeInsets(insets: 20)
-            let substractedAsArray = UIEdgeInsets(insets: 20) - UIEdgeInsets(insets: 10)
-            expect(added).to(equal(UIEdgeInsets(insets: 30)))
-            expect(substractedAsArray).to(equal(UIEdgeInsets(insets: 10)))
+            let added = UIEdgeInsets(edges: 10) + UIEdgeInsets(edges: 20)
+            let substractedAsArray = UIEdgeInsets(edges: 20) - UIEdgeInsets(edges: 10)
+            expect(added).to(equal(UIEdgeInsets(edges: 30)))
+            expect(substractedAsArray).to(equal(UIEdgeInsets(edges: 10)))
         }
         it("should do arithmatics operation with cgfloat") {
-            let added = UIEdgeInsets(insets: 10) + 20
-            let substractedAsArray = UIEdgeInsets(insets: 20) - 10
-            let multiplied = UIEdgeInsets(insets: 10) * 2
-            let divided = UIEdgeInsets(insets: 20) / 10
-            expect(added).to(equal(UIEdgeInsets(insets: 30)))
-            expect(substractedAsArray).to(equal(UIEdgeInsets(insets: 10)))
-            expect(multiplied).to(equal(UIEdgeInsets(insets: 20)))
-            expect(divided).to(equal(UIEdgeInsets(insets: 2)))
+            let added = UIEdgeInsets(edges: 10) + 20
+            let substractedAsArray = UIEdgeInsets(edges: 20) - 10
+            let multiplied = UIEdgeInsets(edges: 10) * 2
+            let divided = UIEdgeInsets(edges: 20) / 10
+            expect(added).to(equal(UIEdgeInsets(edges: 30)))
+            expect(substractedAsArray).to(equal(UIEdgeInsets(edges: 10)))
+            expect(multiplied).to(equal(UIEdgeInsets(edges: 20)))
+            expect(divided).to(equal(UIEdgeInsets(edges: 2)))
         }
     }
 }
