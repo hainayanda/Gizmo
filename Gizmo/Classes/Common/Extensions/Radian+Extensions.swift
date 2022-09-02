@@ -23,7 +23,7 @@ public extension Double {
     }
 }
 
-public extension Int {
+public extension BinaryInteger {
     /// convert angle in Int to its radian value
     @inlinable var angleDegree: Radian {
         Float(self).angleDegree

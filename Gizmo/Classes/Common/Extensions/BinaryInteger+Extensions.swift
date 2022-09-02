@@ -7,7 +7,10 @@
 
 import Foundation
 
-public extension Int {
+// MARK: TimeInterval
+
+public extension BinaryInteger {
+    
     /// Convert int value to equivalent microseconds in TimeInterval
     @inlinable var microSeconds: TimeInterval {
         miliSeconds / 1000
@@ -41,5 +44,14 @@ public extension Int {
     /// Convert int value to equivalent weeks in TimeInterval
     @inlinable var weeks: TimeInterval {
         days * 7
+    }
+}
+
+// MARK: Percent
+
+public extension BinaryInteger {
+    /// Convert int value to equivalent microseconds in TimeInterval
+    @inlinable var percent: Double {
+        Double(self) / 100
     }
 }
