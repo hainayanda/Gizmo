@@ -33,10 +33,10 @@ public extension CGRect {
         return CGRect(origin: origin, size: size)
     }
     
-    /// Calculate insets to frame containing the given frame
+    /// Calculate offsets to frame containing the given frame
     /// - Parameter outerFrame: Frame containing this CGRect
     /// - Returns: UIEdgeInsets of the frame
-    @inlinable func insets(to outerFrame: CGRect) -> UIEdgeInsets {
+    @inlinable func offsets(to outerFrame: CGRect) -> UIEdgeOffsets {
         outerFrame.insets(of: self)
     }
     
@@ -65,7 +65,7 @@ public extension CGRect {
     /// Calculate new frame if enlarged by the given offset
     /// - Parameter offsets: Offset for enlargement
     /// - Returns: New enlarged CGRect
-    @inlinable func enlarged(by offsets: UIEdgeInsets) -> CGRect {
+    @inlinable func enlarged(by offsets: UIEdgeOffsets) -> CGRect {
         let origin = CGPoint(x: origin.x - offsets.left, y: origin.y - offsets.top)
         let size = self.size.enlarged(by: offsets)
         return CGRect(origin: origin, size: size)

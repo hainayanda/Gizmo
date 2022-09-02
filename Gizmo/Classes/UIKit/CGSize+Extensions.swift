@@ -36,7 +36,7 @@ public extension CGSize {
     /// Create new enlarged size by the given offsets
     /// - Parameter offsets: Offsets that will enlarge the size
     /// - Returns: Enlarged size
-    @inlinable func enlarged(by offsets: UIEdgeInsets) -> CGSize {
+    @inlinable func enlarged(by offsets: UIEdgeOffsets) -> CGSize {
         CGSize(
             width: width + offsets.left + offsets.right,
             height: height + offsets.top + offsets.bottom
