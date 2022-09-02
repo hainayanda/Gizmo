@@ -42,17 +42,17 @@ class UIEdgeExtensionsSpec: QuickSpec {
         }
         it("should do arithmatics operation with two insets") {
             let added = UIEdgeInsets(insets: 10) + UIEdgeInsets(insets: 20)
-            let substracted = UIEdgeInsets(insets: 20) - UIEdgeInsets(insets: 10)
+            let substractedAsArray = UIEdgeInsets(insets: 20) - UIEdgeInsets(insets: 10)
             expect(added).to(equal(UIEdgeInsets(insets: 30)))
-            expect(substracted).to(equal(UIEdgeInsets(insets: 10)))
+            expect(substractedAsArray).to(equal(UIEdgeInsets(insets: 10)))
         }
         it("should do arithmatics operation with cgfloat") {
             let added = UIEdgeInsets(insets: 10) + 20
-            let substracted = UIEdgeInsets(insets: 20) - 10
+            let substractedAsArray = UIEdgeInsets(insets: 20) - 10
             let multiplied = UIEdgeInsets(insets: 10) * 2
             let divided = UIEdgeInsets(insets: 20) / 10
             expect(added).to(equal(UIEdgeInsets(insets: 30)))
-            expect(substracted).to(equal(UIEdgeInsets(insets: 10)))
+            expect(substractedAsArray).to(equal(UIEdgeInsets(insets: 10)))
             expect(multiplied).to(equal(UIEdgeInsets(insets: 20)))
             expect(divided).to(equal(UIEdgeInsets(insets: 2)))
         }
