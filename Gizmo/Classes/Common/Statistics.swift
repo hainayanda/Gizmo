@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: Median
 
-public extension Array where Element: Comparable {
+public extension Collection where Element: Comparable {
     
     /// Find median of the array if its sorted
     /// - Complexity: O((*n* / 2) log *n*), where *n* is the length of base array
@@ -23,7 +23,7 @@ public extension Array where Element: Comparable {
         }
         let medianIndex = count / 2
         let medianCount = medianIndex + 1
-        var temporary = self
+        var temporary = Array(self)
         
         for index in 0 ..< medianCount {
             var smallestIndex = index
@@ -53,7 +53,7 @@ public extension Sequence where Element: AdditiveArithmetic {
 
 // MARK: Average
 
-public extension Array where Element: FloatingPoint {
+public extension Collection where Element: FloatingPoint {
     /// Calculate average value of the array elements
     /// - Complexity: O(*n*)  on average, where *n* is the length of array
     @inlinable var average: Element {
@@ -61,7 +61,7 @@ public extension Array where Element: FloatingPoint {
     }
 }
 
-public extension Array where Element: BinaryInteger {
+public extension Collection where Element: BinaryInteger {
     /// Calculate average value of the array elements
     /// - Complexity: O(*n*)  on average, where *n* is the length of array
     @inlinable var average: Element {
