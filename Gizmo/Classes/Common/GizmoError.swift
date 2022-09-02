@@ -10,4 +10,5 @@ import Foundation
 public enum GizmoError: Error {
     case encodingError(reason: String)
     case jsonTypeError(reason: String)
+    case failToUnwrappingOptional(type: Any.Type)
 }
