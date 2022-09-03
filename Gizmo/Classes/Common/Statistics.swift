@@ -12,9 +12,8 @@ import Foundation
 public extension Collection where Element: Comparable {
     
     /// Find median of the array if its sorted
-    /// - Complexity: O((*n* / 2) log *n*), where *n* is the number of iteration run by collection iterator
+    /// - Complexity: O((*n* / 2) log *n*) on average, where *n* is the number of iteration run by collection iterator
     @inlinable var median: Median<Element> {
-        guard isNotEmpty else { return .noMedian }
         guard count > 1 else {
             guard let median = self.first else {
                 return .noMedian
@@ -23,19 +22,12 @@ public extension Collection where Element: Comparable {
         }
         let medianIndex = count / 2
         let medianCount = medianIndex + 1
-        var temporary = Array(self)
         
-        for index in 0 ..< medianCount {
-            var smallestIndex = index
-            for compareIndex in index + 1 ..< count where temporary[smallestIndex] > temporary[compareIndex] {
-                smallestIndex = compareIndex
-            }
-            temporary.swapAt(smallestIndex, index)
-        }
+        let sortedUntilMedian = Array(sortedSequence().capped(atMaxIteration: medianCount))
         if count % 2 == 0 {
-            return .double(temporary[medianIndex - 1], temporary[medianIndex])
+            return .double(sortedUntilMedian[medianIndex - 1], sortedUntilMedian[medianIndex])
         }
-        return .single(temporary[medianIndex])
+        return .single(sortedUntilMedian[medianIndex])
     }
 }
 
@@ -53,19 +45,29 @@ public extension Sequence where Element: AdditiveArithmetic {
 
 // MARK: Average
 
-public extension Collection where Element: FloatingPoint {
+public extension Sequence where Element: FloatingPoint {
     /// Calculate average value of the array elements
     /// - Complexity: O(*n*)  on average, where *n* is the number of iteration run by collection iterator
     @inlinable var average: Element {
-        return sum / Element(self.count)
+        var count = 0
+        let sum: Element = reduce(.zero) { partialResult, element in
+            count += 1
+            return partialResult + element
+        }
+        return sum / Element(count)
     }
 }
 
-public extension Collection where Element: BinaryInteger {
+public extension Sequence where Element: BinaryInteger {
     /// Calculate average value of the array elements
     /// - Complexity: O(*n*)  on average, where *n* is the number of iteration run by sequence iterator
     @inlinable var average: Element {
-        return sum / Element(self.count)
+        var count = 0
+        let sum: Element = reduce(.zero) { partialResult, element in
+            count += 1
+            return partialResult + element
+        }
+        return sum / Element(count)
     }
 }
 

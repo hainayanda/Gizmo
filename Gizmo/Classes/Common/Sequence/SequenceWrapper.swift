@@ -10,7 +10,7 @@ import Foundation
 // MARK: SequenceWrapper
 
 /// SequenceWrapper object to allow custom iterator for iterating the sequence wrapped
-open class SequenceWrapper<Element>: Sequence {
+public class SequenceWrapper<Element>: Sequence {
     public typealias Iterator = SequenceWrapperIterator<Element>
     
     let iteratorFactory: () -> Iterator
