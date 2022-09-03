@@ -2,7 +2,7 @@
 //  UniqueSequenceSpec.swift
 //  Gizmo_Tests
 //
-//  Created by Nayanda Haberty on 02/08/22.
+//  Created by Nayanda Haberty on 03/09/22.
 //  Copyright © 2022 CocoaPods. All rights reserved.
 //
 
@@ -14,43 +14,25 @@ import Gizmo
 class UniqueSequenceSpec: QuickSpec {
     
     override func spec() {
-        context("hashable") {
-            let source = [
-                MyHashable(number: 0), MyHashable(number: 1), MyHashable(number: 2),
-                MyHashable(number: 3), MyHashable(number: 3), MyHashable(number: 2),
-                MyHashable(number: 1), MyHashable(number: 4), MyHashable(number: 5),
-                MyHashable(number: 5)
-            ]
-            it("should iterate uniquely for hashable") {
-                var expectation = MyHashable(number: 0)
-                source.uniqued.forEach { number in
-                    expect(number).to(equal(expectation))
-                    expectation = MyHashable(number: expectation.number + 1)
-                }
-            }
+        it("should create unique sequence from projection") {
+            let expected: [Dummy] = .dummies(count: Int.random(in: 25..<50))
+            let source: [Dummy] = Array(expected[0..<10]) + expected + Array(expected[20..<expected.count])
+            expect(source.uniquedArray { $0.id }.compactMap { $0.id }).to(equal(expected.compactMap { $0.id }))
         }
-        context("equatable") {
-            let source = [
-                MyEquatable(number: 0), MyEquatable(number: 1), MyEquatable(number: 2),
-                MyEquatable(number: 3), MyEquatable(number: 3), MyEquatable(number: 2),
-                MyEquatable(number: 1), MyEquatable(number: 4), MyEquatable(number: 5),
-                MyEquatable(number: 5)
-            ]
-            it("should iterate uniquely for equatable") {
-                var expectation = MyEquatable(number: 0)
-                source.uniqued.forEach { number in
-                    expect(number).to(equal(expectation))
-                    expectation = MyEquatable(number: expectation.number + 1)
-                }
-            }
+        it("should create unique sequence from equatables") {
+            let expected: [DummyEquatable] = .dummies(count: Int.random(in: 25..<50))
+            let source: [DummyEquatable] = Array(expected[0..<10]) + expected + Array(expected[20..<expected.count])
+            expect(source.uniquedArray).to(equal(expected))
+        }
+        it("should create unique sequence from hashables") {
+            let expected: [DummyHashable] = .dummies(count: Int.random(in: 25..<50))
+            let source: [DummyHashable] = Array(expected[0..<10]) + expected + Array(expected[20..<expected.count])
+            expect(source.uniquedArray).to(equal(expected))
+        }
+        it("should create unique sequence from equatables") {
+            let expected: [DummyObject] = .dummies(count: Int.random(in: 25..<50))
+            let source: [DummyObject] = Array(expected[0..<10]) + expected + Array(expected[20..<expected.count])
+            expect(source.uniquedObjectsArray.compactMap { $0.id }).to(equal(expected.compactMap { $0.id }))
         }
     }
-}
-
-fileprivate struct MyEquatable: Equatable {
-    let number: Int
-}
-
-fileprivate struct MyHashable: Hashable {
-    let number: Int
 }

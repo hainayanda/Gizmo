@@ -133,7 +133,7 @@ public extension Sequence where Element: AnyObject {
     /// If you just need to iterate the element uniquely, consider using `objectsSymetricDifferenced` instead
     /// ```
     /// // this will have time complexity O(2k + 2l + m) where k is myArray length, l is otherArray length and m is intersection array length
-    /// myArray.objectsSymetricDifference(by: otherArray).forEach {
+    /// myArray.objectsSymetricDifferenceArray(by: otherArray).forEach {
     ///     print($0)
     /// }
     ///
@@ -145,7 +145,7 @@ public extension Sequence where Element: AnyObject {
     /// - Complexity: O( 2 (*n* + *m*) ) on average where *n* is the original sequence iterator iteration count, and *m* is the substracting sequence iterator iteration count
     /// - Parameter otherSequence: A sequence to have an object symetric difference with this sequence
     /// - Returns: Array of object symetric difference element from this sequence and the given sequence
-    @inlinable func objectsSymetricDifference<S: Sequence>(from otherSequence: S) -> [Element]
+    @inlinable func objectsSymetricDifferenceArray<S: Sequence>(from otherSequence: S) -> [Element]
     where S.Element == Element {
         objectsSymetricDifferenced(from: otherSequence).asArray
     }
