@@ -139,12 +139,12 @@
 		BB3605152890EF0100D288C4 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				BB95114928C2E99C00A5A2EC /* Model */,
-				BB95114628C2E89A00A5A2EC /* Sequence */,
-				BB95114528C2E86A00A5A2EC /* Extensions */,
 				BB36051E2892579900D288C4 /* ClosureHelperSpec.swift */,
 				BB72F0B0289A34380056B901 /* StatisticsSpec.swift */,
 				BB3B978028A7487600423EE1 /* TimeZoneSpec.swift */,
+				BB95114528C2E86A00A5A2EC /* Extensions */,
+				BB95114928C2E99C00A5A2EC /* Model */,
+				BB95114628C2E89A00A5A2EC /* Sequence */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -170,8 +170,8 @@
 				BB36051628911A5100D288C4 /* DateExtensionsSpec.swift */,
 				BB360518289250CB00D288C4 /* DictionaryExtensionsSpec.swift */,
 				BB3605222892BB8200D288C4 /* RadianExtensionsSpec.swift */,
-				BB36051C2892565700D288C4 /* StringExtensionsSpec.swift */,
 				BB95115828C2F7E500A5A2EC /* SequenceExtensionsSpec.swift */,
+				BB36051C2892565700D288C4 /* StringExtensionsSpec.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -179,10 +179,10 @@
 		BB95114628C2E89A00A5A2EC /* Sequence */ = {
 			isa = PBXGroup;
 			children = (
+				BB95115028C2F08F00A5A2EC /* CombinationSequenceSpec.swift */,
 				BB95114728C2E98900A5A2EC /* CompactMappedSequenceSpec.swift */,
 				BB95114C28C2EE1600A5A2EC /* FilteredSequenceSpec.swift */,
 				BB95114E28C2EEAF00A5A2EC /* IntersectionSequenceSpec.swift */,
-				BB95115028C2F08F00A5A2EC /* CombinationSequenceSpec.swift */,
 				BB95115228C2F31D00A5A2EC /* SequenceWrapperSpec.swift */,
 				BB95115428C2F4C700A5A2EC /* SubstractedSequenceSpec.swift */,
 				BB95115628C2F62700A5A2EC /* UniqueSequenceSpec.swift */,

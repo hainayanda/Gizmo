@@ -556,11 +556,11 @@
 		1A8BFCF8978F1EE2081683713F258723 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				3AE33B1528C1D3AE003A614A /* Extensions */,
-				3A07FA1728BF3D0D00D4DB2B /* Sequence */,
 				645FD996108FD2A8E6C3694336E8DBE1 /* ClosureHelper.swift */,
 				5AD1276B42A9B213F8D0D59E86B72D58 /* GizmoError.swift */,
 				5072AB41907F5CCDCDC0BB5793C2EEA5 /* Statistics.swift */,
+				3AE33B1528C1D3AE003A614A /* Extensions */,
+				3A07FA1728BF3D0D00D4DB2B /* Sequence */,
 			);
 			name = Common;
 			path = Gizmo/Classes/Common;
@@ -921,12 +921,12 @@
 			isa = PBXGroup;
 			children = (
 				2AB1186385046B40FF1EE907B7504978 /* CACornerMask+Extensions.swift */,
+				BB53B7DA28A9E2C80078A4D8 /* CGFloat+Extensions.swift */,
 				06032EA3929DC0C63168865022D23A93 /* CGRect+Extensions.swift */,
 				181A26A13FB09C414409D86A9512B5DC /* CGSize+Extensions.swift */,
 				DB348E2FCC159680518B6E30E2ED989E /* UIColor+Extensions.swift */,
 				9BAD0F7E337714D2AF01D2E661392A1D /* UIEdgeInsets+ Extensions.swift */,
 				3D6CB60DFCFE1CF718C1FED5014A5D6C /* UIResponder+Extensions.swift */,
-				BB53B7DA28A9E2C80078A4D8 /* CGFloat+Extensions.swift */,
 			);
 			name = UIKit;
 			path = Gizmo/Classes/UIKit;
