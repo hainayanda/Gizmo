@@ -90,12 +90,14 @@ Gizmo is available under the MIT license. See the LICENSE file for more info.
 ### Sequence
 
 - `SequenceWrapper`
+- `CappedSequence`
 - `CompactMapSequence`
 - `FilteredSequence`
 - `IntersectionSequence`
 - `SequenceCombination`
 - `SubstractedSequence`
 - `UniqueSequence`
+- `SortedSequence`
 
 ### Helpers
 
@@ -106,7 +108,7 @@ Gizmo is available under the MIT license. See the LICENSE file for more info.
 ### Extra
 
 - `GizmoError`
-- `UniqueSequence`
+- `DoublyLinkedList`
 
 ***
 

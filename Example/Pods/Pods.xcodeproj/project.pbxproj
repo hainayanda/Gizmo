@@ -164,6 +164,9 @@
 		B93F3526A95D7F43EEBFEE5E453E4795 /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73605DFD21C4FDD46AF62818CF182C /* BeLessThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		BB1DB9E7B618599D69921D04A86E8667 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA2C754BCCAA4191D1428A5035093B /* PhoneNumber.swift */; };
 		BB53B7DB28A9E2C80078A4D8 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB53B7DA28A9E2C80078A4D8 /* CGFloat+Extensions.swift */; };
+		BB95115B28C30E0600A5A2EC /* SortedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95115A28C30E0600A5A2EC /* SortedSequence.swift */; };
+		BB95115D28C31B2100A5A2EC /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95115C28C31B2100A5A2EC /* DoublyLinkedList.swift */; };
+		BB95115F28C34F0400A5A2EC /* CappedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95115E28C34F0400A5A2EC /* CappedSequence.swift */; };
 		BBB9E3000193E504B4AE82609272435F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
 		BD3ABAC28025564DCF2E6C12009435DF /* CwlMachBadInstructionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 87165B2883B4E242B92F81762521F737 /* CwlMachBadInstructionHandler.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		BEA7C7B691E6B75C1FA1E11583F39BF1 /* Pods-Gizmo_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A48C9075C6E76F69FA4F903C082B6F45 /* Pods-Gizmo_Tests-dummy.m */; };
@@ -437,6 +440,9 @@
 		BA272A6F7D1102652BC2241D2C4B9B7F /* NMBExpectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NMBExpectation.swift; path = Sources/Nimble/Adapters/NMBExpectation.swift; sourceTree = "<group>"; };
 		BAE263041362D074978BB3B577DF0A05 /* Nimble */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Nimble; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB53B7DA28A9E2C80078A4D8 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		BB95115A28C30E0600A5A2EC /* SortedSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedSequence.swift; sourceTree = "<group>"; };
+		BB95115C28C31B2100A5A2EC /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
+		BB95115E28C34F0400A5A2EC /* CappedSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CappedSequence.swift; sourceTree = "<group>"; };
 		BBD9787B2FFA1856325CF7E4E8406990 /* es.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = es.json; path = Sources/Fakery/Resources/Locales/es.json; sourceTree = "<group>"; };
 		BD83EF9CD4EBD2B755FDBE4919B32036 /* mach_excServer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mach_excServer.c; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.c; sourceTree = "<group>"; };
 		BD9DC3C817920C2390BE8C02AE0E7C6F /* MatchError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchError.swift; path = Sources/Nimble/Matchers/MatchError.swift; sourceTree = "<group>"; };
@@ -557,6 +563,7 @@
 			isa = PBXGroup;
 			children = (
 				645FD996108FD2A8E6C3694336E8DBE1 /* ClosureHelper.swift */,
+				BB95115C28C31B2100A5A2EC /* DoublyLinkedList.swift */,
 				5AD1276B42A9B213F8D0D59E86B72D58 /* GizmoError.swift */,
 				5072AB41907F5CCDCDC0BB5793C2EEA5 /* Statistics.swift */,
 				3AE33B1528C1D3AE003A614A /* Extensions */,
@@ -625,6 +632,8 @@
 				3AB4F44A28C0A15D00026E0B /* SequenceWrapper.swift */,
 				3A98ABE028C0585500BFC9C0 /* SubstractedSequence.swift */,
 				3A07FA1328BF3B1A00D4DB2B /* UniqueSequence.swift */,
+				BB95115A28C30E0600A5A2EC /* SortedSequence.swift */,
+				BB95115E28C34F0400A5A2EC /* CappedSequence.swift */,
 			);
 			path = Sequence;
 			sourceTree = "<group>";
@@ -1247,6 +1256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB53B7DB28A9E2C80078A4D8 /* CGFloat+Extensions.swift in Sources */,
+				BB95115B28C30E0600A5A2EC /* SortedSequence.swift in Sources */,
 				DB492B0C34AAF5D4247E2913CE7B7A66 /* Array+Extensions.swift in Sources */,
 				9F763D01D1E4BDC4197B69BC4104791E /* CACornerMask+Extensions.swift in Sources */,
 				53EB1011056E3567AB27D91FEED1A41F /* CGRect+Extensions.swift in Sources */,
@@ -1261,10 +1271,12 @@
 				F3A52ECDE608A4E598F18E67B1108F9C /* Gizmo-dummy.m in Sources */,
 				5303E9A9B5D82563CBBCA972426AAF78 /* GizmoError.swift in Sources */,
 				3A98ABE128C0585500BFC9C0 /* SubstractedSequence.swift in Sources */,
+				BB95115D28C31B2100A5A2EC /* DoublyLinkedList.swift in Sources */,
 				3A07FA1928BF3D2B00D4DB2B /* CompactMappedSequence.swift in Sources */,
 				3AB4F44B28C0A15E00026E0B /* SequenceWrapper.swift in Sources */,
 				3AE33B1428C1CA2E003A614A /* Sequence+Extensions.swift in Sources */,
 				5E464AE1A8EBF4BB349185AC8D78536A /* BinaryInteger+Extensions.swift in Sources */,
+				BB95115F28C34F0400A5A2EC /* CappedSequence.swift in Sources */,
 				40B930C8ACD1BCE526154F61A551B650 /* Radian+Extensions.swift in Sources */,
 				3A98ABE328C064B500BFC9C0 /* IntersectionSequence.swift in Sources */,
 				5E8FCC1F3D5ED79FB5D99AA77BB39446 /* Statistics.swift in Sources */,
