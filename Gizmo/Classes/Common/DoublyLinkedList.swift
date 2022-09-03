@@ -9,7 +9,6 @@ import Foundation
 
 // MARK: DoublyLinkedList
 
-/// Doubly Linked List
 /// Use this instead of regular array if you need to do many mutable manipulation.
 /// This generally will have less time complexity for most of manipulation task
 /// Use array instead if you need to do many direct access to the element using index
