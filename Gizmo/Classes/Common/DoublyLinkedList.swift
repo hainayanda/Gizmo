@@ -106,7 +106,7 @@ final public class DoublyLinkedList<Element> {
         if contains(node: node) {
             naiveRemove(node: node)
         }
-        guard index == count else {
+        if index == count {
             naiveAppend(node: node)
             return
         }
@@ -140,9 +140,12 @@ final public class DoublyLinkedList<Element> {
     ///   - newElements: New elements inserted
     ///   - index: Index of the new elements
     public func insert<S>(contentsOf newElements: S, at index: Int) where S : Sequence, Element == S.Element {
-        guard index < count else {
+        if index == count {
             append(contentsOf: newElements)
             return
+        }
+        guard index >= 0 && index < count else {
+            fatalError("Index should be greater than zero and less than sequence count")
         }
         guard let nodes = prepareForInsert(contentsOf: newElements) else {
             return
@@ -204,10 +207,25 @@ final public class DoublyLinkedList<Element> {
     /// - Complexity: O(*n*), where *n* is the length of this sequence
     /// - Parameter shouldBeRemoved: Array that accept the element and return Bool indicating the element should be removed or not
     public func removeAll(where shouldBeRemoved: (Element) throws -> Bool) rethrows {
-        try populated.keys.forEach {
-            guard try shouldBeRemoved($0.element) else { return }
-            naiveRemove(node: $0)
-        }
+        guard let currentRoot = root else { return }
+        var current: Node? = currentRoot
+        var last: Node? = current
+        repeat {
+            defer { current = current?.next }
+            guard let node = current, try shouldBeRemoved(node.element) else {
+                last = current
+                continue
+            }
+            if self.root === node {
+                let newRoot = node.next
+                newRoot?.previous = nil
+                self.root = newRoot
+            }
+            node.previous?.next = node.next
+            node.next?.previous = node.previous
+            populated[node] = nil
+        } while current != nil
+        self.tail = last
     }
     
     /// Remove all elements from this sequence
@@ -215,6 +233,7 @@ final public class DoublyLinkedList<Element> {
     public func removeAll() {
         root = nil
         tail = nil
+        populated = [:]
     }
 }
 
@@ -248,6 +267,8 @@ extension DoublyLinkedList {
         }
         node.previous?.next = node.next
         node.next?.previous = node.previous
+        node.next = nil
+        node.previous = nil
     }
     
     func prepareForInsert<S>(contentsOf newElements: S) -> (root: Node, tail: Node)? where S : Sequence, Element == S.Element {
@@ -269,8 +290,8 @@ extension DoublyLinkedList {
     public class Node {
         /// Element stored in this Node
         public var element: Element
-        var previous: Node?
-        var next: Node?
+        public internal(set) var previous: Node?
+        public internal(set) var next: Node?
         
         init(element: Element, previous: Node? = nil, next: Node? = nil) {
             self.element = element

@@ -32,6 +32,7 @@
 		BB95115528C2F4C700A5A2EC /* SubstractedSequenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95115428C2F4C700A5A2EC /* SubstractedSequenceSpec.swift */; };
 		BB95115728C2F62700A5A2EC /* UniqueSequenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95115628C2F62700A5A2EC /* UniqueSequenceSpec.swift */; };
 		BB95115928C2F7E500A5A2EC /* SequenceExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95115828C2F7E500A5A2EC /* SequenceExtensionsSpec.swift */; };
+		BB95116128C3617D00A5A2EC /* DoublyLinkedListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95116028C3617D00A5A2EC /* DoublyLinkedListSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		BB95115428C2F4C700A5A2EC /* SubstractedSequenceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubstractedSequenceSpec.swift; sourceTree = "<group>"; };
 		BB95115628C2F62700A5A2EC /* UniqueSequenceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueSequenceSpec.swift; sourceTree = "<group>"; };
 		BB95115828C2F7E500A5A2EC /* SequenceExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtensionsSpec.swift; sourceTree = "<group>"; };
+		BB95116028C3617D00A5A2EC /* DoublyLinkedListSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedListSpec.swift; sourceTree = "<group>"; };
 		F2C13134AD836193EA375B7B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				BB36051E2892579900D288C4 /* ClosureHelperSpec.swift */,
+				BB95116028C3617D00A5A2EC /* DoublyLinkedListSpec.swift */,
 				BB72F0B0289A34380056B901 /* StatisticsSpec.swift */,
 				BB3B978028A7487600423EE1 /* TimeZoneSpec.swift */,
 				BB95114528C2E86A00A5A2EC /* Extensions */,
@@ -345,6 +348,7 @@
 				BB95114D28C2EE1600A5A2EC /* FilteredSequenceSpec.swift in Sources */,
 				BB36053028938C3300D288C4 /* UIColorExtensionsSpec.swift in Sources */,
 				BB3604F328902C6F00D288C4 /* CollectionExtensionsSpec.swift in Sources */,
+				BB95116128C3617D00A5A2EC /* DoublyLinkedListSpec.swift in Sources */,
 				BB36052A28935F8B00D288C4 /* CACornerMaskExtensionsSpec.swift in Sources */,
 				BB95114828C2E98900A5A2EC /* CompactMappedSequenceSpec.swift in Sources */,
 				BB95115328C2F31D00A5A2EC /* SequenceWrapperSpec.swift in Sources */,
