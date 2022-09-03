@@ -154,6 +154,35 @@ class ArrayExtensionsSpec: QuickSpec {
             let array = [object1, object2, object3]
             expect(array.removedSameInstance(in: [object3, object4])).to(equal([object1, object2]))
         }
+        it("should create array with target count") {
+            let targetCount = Int.random(in: 20..<50)
+            let array: [Int] = .init(targetCount: targetCount, indexedElement: { $0 })
+            var content = 0
+            array.forEach {
+                expect($0).to(equal(content))
+                content += 1
+            }
+            expect(content).to(equal(targetCount))
+            expect(array.count).to(equal(targetCount))
+        }
+        it("should add array until reach count") {
+            let targetCount = Int.random(in: 20..<50)
+            var array: [DummyEquatable] = .dummies(count: Int.random(in: 0..<10))
+            var count = array.count
+            array.appendOrRemove(untilReachCount: targetCount) { index in
+                expect(count).to(equal(index))
+                count += 1
+                return DummyEquatable()
+            }
+            expect(count).to(equal(targetCount))
+            expect(count).to(equal(array.count))
+        }
+        it("should remove array until reach count") {
+            let targetCount = Int.random(in: 0..<10)
+            var array: [DummyEquatable] = .dummies(count: Int.random(in: 10..<50))
+            array.appendOrRemove(untilReachCount: targetCount)  { _ in DummyEquatable() }
+            expect(array.count).to(equal(targetCount))
+        }
     }
 }
 

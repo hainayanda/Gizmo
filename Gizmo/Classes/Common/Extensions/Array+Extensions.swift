@@ -302,19 +302,28 @@ public extension Array where Element: AnyObject {
 
 public extension Array {
     
+    /// Simply just a shortcut to `(0..<targetCount).compactMap(addingElement)`
+    /// - Complexity: O(*n*), where *n* is target array count
+    /// - Parameters:
+    ///   - targetCount: Target size of the array
+    ///   - indexedElement: Closure that will called if its need element on certain index
+    @inlinable init(targetCount: Int, indexedElement: (Int) -> Element) {
+        self = (0..<targetCount).compactMap(indexedElement)
+    }
+    
     /// Append new element to array until it reaches target count
     /// It will remove the last element if the array count is greater than target count
     /// - Complexity: O(*k*) if array count is greater that target count and O(*m*) if array count is less than target count, where *k* is array count minus target count and *m* is target count minus array count
     /// - Parameters:
     ///   - targetCount: Target size of the array
     ///   - adder: Closure that will called if its need element on certain index
-    mutating func appendOrRemove(untilReachCount targetCount: Int, adder: (Int) -> Element) {
+    @inlinable mutating func appendOrRemove(untilReachCount targetCount: Int, adder: (Int) -> Element) {
         guard count < targetCount else {
             removeLast(count - targetCount)
             return
         }
-        while count < targetCount {
-            append(adder(count))
+        for index in count ..< targetCount {
+            append(adder(index))
         }
     }
     
@@ -324,8 +333,8 @@ public extension Array {
     /// - Parameters:
     ///   - targetCount: Target size of the array
     ///   - addingElement: Element that will be added if needed
-    mutating func appendOrRemove(untilReachCount targetCount: Int, addingElement: Element) {
-        appendOrRemove(untilReachCount: targetCount, adder: { _ in addingElement })
+    @inlinable mutating func appendOrRemove(untilReachCount targetCount: Int, addingElement: @autoclosure () -> Element) {
+        appendOrRemove(untilReachCount: targetCount, adder: { _ in addingElement() })
     }
     
     /// Create new duplicated array and add new element to that array until it reaches target count
@@ -335,7 +344,7 @@ public extension Array {
     ///   - targetCount: Target size of the array
     ///   - adder: Closure that will called if its need element on certain index
     /// - Returns: New array
-    func addedOrRemoved(untilReachCount targetCount: Int, adder: (Int) -> Element) -> [Element] {
+    @inlinable func addedOrRemoved(untilReachCount targetCount: Int, adder: (Int) -> Element) -> [Element] {
         mutatingWithNewArray { $0.appendOrRemove(untilReachCount: targetCount, adder: adder) }
     }
     
@@ -346,7 +355,7 @@ public extension Array {
     ///   - targetCount: Target size of the array
     ///   - addingElement: Element that will be added if needed
     /// - Returns: New array
-    func addedOrRemoved(untilReachCount targetCount: Int, addingElement: Element) -> [Element] {
+    @inlinable func addedOrRemoved(untilReachCount targetCount: Int, addingElement: @autoclosure () -> Element) -> [Element] {
         mutatingWithNewArray { $0.appendOrRemove(untilReachCount: targetCount, addingElement: addingElement) }
     }
 }
