@@ -26,6 +26,7 @@ class SequenceWrapperSpec: QuickSpec {
                 count += 1
             }
             expect(count).to(equal(expected.count))
+            expect(combined.earlyProcess()).to(equal(expected))
         }
     }
 }

@@ -14,8 +14,8 @@ import Foundation
 /// Use array instead if you need to do many direct access to the element using index
 /// This generally will have more time complexity for most of accessing task
 final public class DoublyLinkedList<Element> {
-    private var root: Node?
-    private var tail: Node?
+    var root: Node?
+    var tail: Node?
     private var populated: [Node: Void] = [:]
     
     /// First element in this DoublyLinkedList
@@ -210,7 +210,8 @@ final public class DoublyLinkedList<Element> {
         var current: Node? = currentRoot
         var last: Node? = current
         repeat {
-            defer { current = current?.next }
+            let next = current?.next
+            defer { current = next }
             guard let node = current, try shouldBeRemoved(node.element) else {
                 last = current
                 continue
@@ -220,8 +221,7 @@ final public class DoublyLinkedList<Element> {
                 newRoot?.previous = nil
                 self.root = newRoot
             }
-            node.previous?.next = node.next
-            node.next?.previous = node.previous
+            node.removeFromLink()
             populated[node] = nil
         } while current != nil
         self.tail = last
@@ -264,10 +264,7 @@ extension DoublyLinkedList {
             newTail?.next = nil
             tail = newTail
         }
-        node.previous?.next = node.next
-        node.next?.previous = node.previous
-        node.next = nil
-        node.previous = nil
+        node.removeFromLink()
     }
     
     func prepareForInsert<S>(contentsOf newElements: S) -> (root: Node, tail: Node)? where S : Sequence, Element == S.Element {
@@ -279,138 +276,5 @@ extension DoublyLinkedList {
             node.previous = nodes.tail
             return (nodes.root, node)
         }
-    }
-}
-
-// MARK: DoublyLinkedList Node
-
-extension DoublyLinkedList {
-    /// Node of DoubleLinkedList
-    public class Node {
-        /// Element stored in this Node
-        public var element: Element
-        public internal(set) var previous: Node?
-        public internal(set) var next: Node?
-        
-        init(element: Element, previous: Node? = nil, next: Node? = nil) {
-            self.element = element
-            self.previous = previous
-            self.next = next
-        }
-    }
-}
-
-// MARK: DoublyLinkedList Node Internal
-
-extension DoublyLinkedList.Node {
-    
-    var mostNext: DoublyLinkedList<Element>.Node {
-        next?.mostNext ?? self
-    }
-    
-    var mostPrevious: DoublyLinkedList<Element>.Node {
-        previous?.mostPrevious ?? self
-    }
-    
-    func nextNode(for count: Int) -> DoublyLinkedList<Element>.Node? {
-        count == 0 ? self: next?.nextNode(for: count - 1)
-    }
-    
-    func previousNode(for count: Int) -> DoublyLinkedList<Element>.Node? {
-        count == 0 ? self: previous?.previousNode(for: count - 1)
-    }
-}
-
-// MARK: DoublyLinkedList Node + Hashable
-
-extension DoublyLinkedList.Node: Hashable {
-    
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(ObjectIdentifier(self))
-    }
-    
-    public static func == (lhs: DoublyLinkedList<Element>.Node, rhs: DoublyLinkedList<Element>.Node) -> Bool {
-        ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
-    }
-}
-
-// MARK: DoublyLinkedList + Sequence
-
-extension DoublyLinkedList: Sequence {
-    public typealias Iterator = DoublyLinkedListIterator<Element>
-    
-    public func makeIterator() -> DoublyLinkedListIterator<Element> {
-        DoublyLinkedListIterator(root: root)
-    }
-    
-    /// Create a SequenceWrapper of Node that will iterate the Nodes of this DoublyLinkedList instead of the elements
-    /// - Returns: a new SequenceWrapper
-    public func nodeSequence() -> SequenceWrapper<Node> {
-        let iterator = DoublyLinkedListNodeIterator(root: root)
-        return SequenceWrapper(iterator: iterator)
-    }
-}
-
-// MARK: DoublyLinkedList + Collection
-
-extension DoublyLinkedList: Collection {
-    
-    public typealias Index = Int
-    
-    public subscript(position: Int) -> Element {
-        get {
-            node(at: position)!.element
-        }
-        set {
-            node(at: position)!.element = newValue
-        }
-    }
-    
-    public func index(after index: Int) -> Int { index + 1 }
-    
-    public var startIndex: Int { 0 }
-    
-    public var endIndex: Int { count }
-}
-
-// MARK: DoublyLinkedList + ExpressibleByArrayLiteral
-
-extension DoublyLinkedList: ExpressibleByArrayLiteral {
-    public typealias ArrayLiteralElement = Element
-    
-    public convenience init(arrayLiteral elements: Element...) {
-        self.init(elements)
-    }
-}
-
-// MARK: DoublyLinkedListIterator
-
-public struct DoublyLinkedListIterator<Element>: IteratorProtocol {
-    
-    private var currentNode: DoublyLinkedList<Element>.Node?
-    
-    init(root: DoublyLinkedList<Element>.Node?) {
-        self.currentNode = root
-    }
-    
-    public mutating func next() -> Element? {
-        defer { currentNode = currentNode?.next }
-        return currentNode?.element
-    }
-}
-
-// MARK: DoublyLinkedListNodeIterator
-
-class DoublyLinkedListNodeIterator<Element>: SequenceWrapperIterator<DoublyLinkedList<Element>.Node> {
-    
-    private var currentNode: DoublyLinkedList<Element>.Node?
-    
-    init(root: DoublyLinkedList<Element>.Node?) {
-        self.currentNode = root
-    }
-    
-    override func next() -> DoublyLinkedList<Element>.Node? {
-        defer { currentNode = currentNode?.next }
-        return currentNode
     }
 }

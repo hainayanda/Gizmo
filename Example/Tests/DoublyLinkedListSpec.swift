@@ -19,6 +19,12 @@ class DoublyLinkedListSpec: QuickSpec {
             array = .dummies(count: 10)
             linkedList = .init(array)
         }
+        it("should get using subscript") {
+            expect(linkedList.count).to(equal(array.count))
+            array.enumerated().forEach { index, dummy in
+                expect(linkedList[index]).to(equal(dummy))
+            }
+        }
         it("should get node at given index") {
             array.enumerated().forEach { index, element in
                 expect(linkedList.node(at: index)?.element).to(equal(element))
