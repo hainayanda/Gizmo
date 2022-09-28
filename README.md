@@ -87,18 +87,6 @@ Gizmo is available under the MIT license. See the LICENSE file for more info.
 - `UIEdgeInsets` Extensions
 - `UIResponder` Extensions
 
-### Sequence
-
-- `SequenceWrapper`
-- `CappedSequence`
-- `CompactMapSequence`
-- `FilteredSequence`
-- `IntersectionSequence`
-- `SequenceCombination`
-- `SubstractedSequence`
-- `UniqueSequence`
-- `SortedSequence`
-
 ### Helpers
 
 - Closure Helpers
