@@ -13,6 +13,7 @@ import Gizmo
 
 class DateExtensionsSpec: QuickSpec {
     
+    // swiftlint:disable function_body_length
     override func spec() {
         it("should true if date is right") {
             expect(Date().isToday()).to(beTrue())
@@ -128,4 +129,5 @@ class DateExtensionsSpec: QuickSpec {
             }
         }
     }
+    // swiftlint:enable function_body_length
 }

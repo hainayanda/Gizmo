@@ -26,7 +26,7 @@ class CollectionExtensionsSpec: QuickSpec {
             expect(array[safe: -1]).to(beNil())
         }
         it("should return not empty") {
-            expect([1,2,3].isNotEmpty).to(beTrue())
+            expect([1, 2, 3].isNotEmpty).to(beTrue())
         }
         it("should return empty") {
             expect([].isNotEmpty).to(beFalse())

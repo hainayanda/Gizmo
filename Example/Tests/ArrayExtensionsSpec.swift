@@ -13,6 +13,7 @@ import Gizmo
 
 class ArrayExtensionsSpec: QuickSpec {
     
+    // swiftlint:disable function_body_length
     override func spec() {
         it("should create new array with added element") {
             let array = [1, 2]
@@ -180,13 +181,14 @@ class ArrayExtensionsSpec: QuickSpec {
         it("should remove array until reach count") {
             let targetCount = Int.random(in: 0..<10)
             var array: [DummyEquatable] = .dummies(count: Int.random(in: 10..<50))
-            array.appendOrRemove(untilReachCount: targetCount)  { _ in DummyEquatable() }
+            array.appendOrRemove(untilReachCount: targetCount) { _ in DummyEquatable() }
             expect(array.count).to(equal(targetCount))
         }
     }
+    // swiftlint:enable function_body_length
 }
 
-fileprivate class MyObject: Equatable {
+private class MyObject: Equatable {
     let id: String = UUID().uuidString
     
     static func == (lhs: MyObject, rhs: MyObject) -> Bool {

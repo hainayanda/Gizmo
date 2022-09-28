@@ -15,6 +15,7 @@ import Gizmo
 
 class UIEdgeExtensionsSpec: QuickSpec {
     
+    // swiftlint:disable function_body_length
     override func spec() {
         it("should create UIEdgeInsets using one insets") {
             expect(UIEdgeInsets(top: 10)).to(equal(UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)))
@@ -79,5 +80,6 @@ class UIEdgeExtensionsSpec: QuickSpec {
             expect(divided).to(equal(UIEdgeInsets(edges: 2)))
         }
     }
+    // swiftlint:enable function_body_length
 }
 #endif

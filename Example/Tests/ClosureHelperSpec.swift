@@ -13,6 +13,7 @@ import Gizmo
 
 class ClosureHelperSpec: QuickSpec {
     
+    // swiftlint:disable function_body_length
     override func spec() {
         context("void closure") {
             var source: VoidMethodSource!
@@ -188,6 +189,7 @@ class ClosureHelperSpec: QuickSpec {
             }
         }
     }
+    // swiftlint:enable function_body_length
 }
 
 var voidMethodCalled: Bool = false
@@ -196,7 +198,7 @@ var voidMethodParam2Called: (Int, String)?
 var voidMethodParam3Called: (Int, String, Int)?
 var voidMethodParam4Called: (Int, String, Int, String)?
 
-fileprivate class VoidMethodSource {
+private class VoidMethodSource {
     func voidMethod() {
         voidMethodCalled = true
     }
@@ -218,7 +220,7 @@ fileprivate class VoidMethodSource {
     }
 }
 
-fileprivate class ReturnMethodSource {
+private class ReturnMethodSource {
     
     func returnMethod() -> Int {
         0
@@ -241,7 +243,7 @@ fileprivate class ReturnMethodSource {
     }
 }
 
-fileprivate class OptionalReturnMethodSource {
+private class OptionalReturnMethodSource {
     
     func returnMethod() -> Int? {
         0

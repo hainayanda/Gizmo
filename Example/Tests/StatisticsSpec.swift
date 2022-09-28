@@ -13,6 +13,7 @@ import Gizmo
 
 class StatisticsSpec: QuickSpec {
     
+    // swiftlint:disable function_body_length
     override func spec() {
         context("int") {
             let arrayEven: [Int] = [5, 4, 3, 1, 6, 5, 2, 1]
@@ -26,8 +27,8 @@ class StatisticsSpec: QuickSpec {
                 expect(arrayOdd.median.value).to(equal(3))
             }
             it("should return none when empty") {
-                expect(Array<Int>().median).to(equal(.noMedian))
-                expect(Array<Int>().median.value).to(beNil())
+                expect([Int]().median).to(equal(.noMedian))
+                expect([Int]().median.value).to(beNil())
             }
         }
         context("double") {
@@ -42,8 +43,8 @@ class StatisticsSpec: QuickSpec {
                 expect(arrayOdd.median.value).to(equal(3))
             }
             it("should return none when empty") {
-                expect(Array<Double>().median).to(equal(.noMedian))
-                expect(Array<Double>().median.value).to(beNil())
+                expect([Double]().median).to(equal(.noMedian))
+                expect([Double]().median.value).to(beNil())
             }
         }
         it("should return single median when array is have just one value") {
@@ -84,4 +85,5 @@ class StatisticsSpec: QuickSpec {
                 .to(equal([1: 1, 2: 2, 3: 3, 4: 1, 5: 2]))
         }
     }
+    // swiftlint:enable function_body_length
 }

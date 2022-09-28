@@ -14,6 +14,7 @@ import Fakery
 
 class StringExtensionsSpec: QuickSpec {
     
+    // swiftlint:disable function_body_length
     override func spec() {
         let faker = Faker()
         it("should convert string to base64") {
@@ -103,6 +104,7 @@ class StringExtensionsSpec: QuickSpec {
                 do {
                     let array = try jsonArrayString.jsonToArray()
                     expect(array.count).to(equal(1))
+                    // swiftlint:disable:next force_cast
                     let dict = array[0] as! [String: Any]
                     expect(dict.count).to(equal(dictionary.count))
                     expect(dict["userName"] as? String).to(equal(dictionary["userName"] as? String))
@@ -115,4 +117,5 @@ class StringExtensionsSpec: QuickSpec {
             }
         }
     }
+    // swiftlint:enable function_body_length
 }
