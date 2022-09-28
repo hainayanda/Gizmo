@@ -356,7 +356,9 @@ public extension Array {
     ///   - addingElement: Element that will be added if needed
     /// - Returns: New array
     @inlinable func addedOrRemoved(untilReachCount targetCount: Int, addingElement: @autoclosure () -> Element) -> [Element] {
-        mutatingWithNewArray { $0.appendOrRemove(untilReachCount: targetCount, addingElement: addingElement) }
+        mutatingWithNewArray {
+            $0.appendOrRemove(untilReachCount: targetCount, addingElement: addingElement())
+        }
     }
 }
 

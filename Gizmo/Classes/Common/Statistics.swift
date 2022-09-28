@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import LazySequence
 
 // MARK: Median
 
@@ -22,10 +21,11 @@ public extension Collection where Element: Comparable {
             return .single(median)
         }
         let medianIndex = count / 2
-        let median = lazy.sortedSequence()
-            .capped(atMaxIteration: medianIndex + 1)
-            .droppedFirst(medianIndex - 1)
-            .asArray
+        let median = Array(
+            self.lazy.sorted()
+                .dropFirst(medianIndex - 1)
+                .prefix(2)
+        )
         guard let last = median.last else { return .noMedian }
         guard let first = median.first, count % 2 == 0, last != first else {
             return .single(last)

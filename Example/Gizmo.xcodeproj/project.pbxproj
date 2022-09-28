@@ -33,7 +33,7 @@
 		561FB04DCC52832698BE1CCF /* Pods-Gizmo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gizmo_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Gizmo_Tests/Pods-Gizmo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Gizmo_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gizmo_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A54AA5409F196F12E35653D1 /* Gizmo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Gizmo.podspec; path = ../Gizmo.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A54AA5409F196F12E35653D1 /* Gizmo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Gizmo.podspec; path = ../Gizmo.podspec; sourceTree = "<group>"; };
 		BB3604F228902C6F00D288C4 /* CollectionExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensionsSpec.swift; sourceTree = "<group>"; };
 		BB36051628911A5100D288C4 /* DateExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionsSpec.swift; sourceTree = "<group>"; };
 		BB360518289250CB00D288C4 /* DictionaryExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsSpec.swift; sourceTree = "<group>"; };
