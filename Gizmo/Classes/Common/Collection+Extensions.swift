@@ -11,10 +11,8 @@ import Foundation
 
 public extension Collection where Indices.Iterator.Element == Index {
     subscript(safe index: Index) -> Element? {
-        get {
-            whenIndexIsSafe(for: index) {
-                self[index]
-            }
+        whenIndexIsSafe(for: index) {
+            self[index]
         }
     }
 }

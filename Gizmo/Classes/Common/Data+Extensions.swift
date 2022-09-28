@@ -29,7 +29,7 @@ public extension Data {
     /// - Returns: Dictionary represent of JSON
     @inlinable func jsonToDictionary(options: JSONSerialization.ReadingOptions = .allowFragments) throws -> [String: Any] {
         let result = try jsonToValue(options: options)
-        guard let dictResult = result as? Dictionary<String, Any> else {
+        guard let dictResult = result as? [String: Any] else {
             throw GizmoError.jsonTypeError(reason: "Data represent json other than object")
         }
         return dictResult
@@ -41,7 +41,7 @@ public extension Data {
     /// - Returns: Array represent of JSON
     @inlinable func jsonToArray(options: JSONSerialization.ReadingOptions = .allowFragments) throws -> [Any] {
         let result = try jsonToValue(options: options)
-        guard let arrayResult = result as? Array<Any> else {
+        guard let arrayResult = result as? [Any] else {
             throw GizmoError.jsonTypeError(reason: "Data represent json other than array")
         }
         return arrayResult
