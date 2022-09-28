@@ -25,14 +25,14 @@ Gizmo is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Gizmo', '~> 1.1.0'
+pod 'Gizmo', '~> 1.2.0'
 ```
 
 ### Swift Package Manager from XCode
 
 - Add it using XCode menu **File > Swift Package > Add Package Dependency**
 - Add **<https://github.com/hainayanda/Gizmo.git>** as Swift Package URL
-- Set rules at **version**, with **Up to Next Major** option and put **1.1.0** as its version
+- Set rules at **version**, with **Up to Next Major** option and put **1.2.0** as its version
 - Click next and wait
 
 ### Swift Package Manager from Package.swift
@@ -41,7 +41,7 @@ Add as your target dependency in ****Package.swift****
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/hainayanda/Gizmo.git", .upToNextMajor(from: "1.1.0"))
+    .package(url: "https://github.com/hainayanda/Gizmo.git", .upToNextMajor(from: "1.2.0"))
 ]
 ```
 
