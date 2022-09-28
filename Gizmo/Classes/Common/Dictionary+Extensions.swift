@@ -14,7 +14,7 @@ public extension Dictionary {
     /// - Complexity: O(*n*), where *n* is the length of this dictionary.
     /// - Parameter mapper: Closure that map the old keys to the new one
     /// - Returns: New dictionary with new set of keys
-    @inlinable func mapKeys<NewKey: Hashable>(_ mapper: (Key) -> NewKey) -> Dictionary<NewKey, Value> {
+    @inlinable func mapKeys<NewKey: Hashable>(_ mapper: (Key) -> NewKey) -> [NewKey: Value] {
         var newDictionary: [NewKey: Value] = [:]
         forEach { pair in
             let newKey = mapper(pair.key)
@@ -29,7 +29,7 @@ public extension Dictionary {
     /// - Complexity: O(*n*), where *n* is the length of this dictionary
     /// - Parameter mapper: Closure that map the old keys to the new one
     /// - Returns: New dictionary with new set of keys
-    @inlinable func compactMapKeys<NewKey: Hashable>(_ mapper: (Key) throws -> NewKey?) -> Dictionary<NewKey, Value> {
+    @inlinable func compactMapKeys<NewKey: Hashable>(_ mapper: (Key) throws -> NewKey?) -> [NewKey: Value] {
         var newDictionary: [NewKey: Value] = [:]
         forEach { pair in
             do {
@@ -49,7 +49,7 @@ public extension Dictionary {
     /// - Complexity: O(*n*), where *n* is the length of this dictionary
     /// - Parameter mapper: Closure that map the old keys and values to the new one
     /// - Returns: New dictionary with new set of keys and values
-    @inlinable func mapKeyValues<NewKey: Hashable, NewValue>(_ mapper: (Key, Value) -> (key: NewKey, value: NewValue)) -> Dictionary<NewKey, NewValue> {
+    @inlinable func mapKeyValues<NewKey: Hashable, NewValue>(_ mapper: (Key, Value) -> (key: NewKey, value: NewValue)) -> [NewKey: NewValue] {
         var newDictionary: [NewKey: NewValue] = [:]
         forEach { pair in
             let newPair = mapper(pair.key, pair.value)
@@ -64,7 +64,7 @@ public extension Dictionary {
     /// - Complexity: O(*n*), where *n* is the length of this dictionary
     /// - Parameter mapper: Closure that map the old keys and values to the new one
     /// - Returns: New dictionary with new set of keys and values
-    @inlinable func compactMapKeyValues<NewKey: Hashable, NewValue>(_ mapper: (Key, Value) throws -> (key: NewKey, value: NewValue)?) -> Dictionary<NewKey, NewValue> {
+    @inlinable func compactMapKeyValues<NewKey: Hashable, NewValue>(_ mapper: (Key, Value) throws -> (key: NewKey, value: NewValue)?) -> [NewKey: NewValue] {
         var newDictionary: [NewKey: NewValue] = [:]
         forEach { pair in
             do {

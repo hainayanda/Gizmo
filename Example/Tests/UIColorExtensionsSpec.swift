@@ -15,6 +15,7 @@ import Gizmo
 
 class UIColorExtensionsSpec: QuickSpec {
     
+    // swiftlint:disable function_body_length
     override func spec() {
         it("should produce hex from color") {
             expect(UIColor.white.hex).to(equal("#FFFFFF"))
@@ -93,5 +94,6 @@ class UIColorExtensionsSpec: QuickSpec {
             expect(UIColor(hex: 0x000000).hex).to(equal(UIColor.black.hex))
         }
     }
+    // swiftlint:enable function_body_length
 }
 #endif

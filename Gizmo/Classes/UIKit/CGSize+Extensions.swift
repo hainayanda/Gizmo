@@ -18,6 +18,11 @@ public extension CGSize {
     /// Max corner radius allowed for size
     @inlinable var maxCornerRadius: CGFloat { min(width, height) / 2 }
     
+    /// Return `True` if the value is valid for UI size
+    @inlinable var isValidUISize: Bool {
+        width.isValidUIDimension && height.isValidUIDimension
+    }
+    
     /// Create new reduced size by the given insets
     /// - Parameter inset: Insets that will reduce the size
     /// - Returns: Reduced size
@@ -31,7 +36,7 @@ public extension CGSize {
     /// Create new enlarged size by the given offsets
     /// - Parameter offsets: Offsets that will enlarge the size
     /// - Returns: Enlarged size
-    @inlinable func enlarged(by offsets: UIEdgeInsets) -> CGSize {
+    @inlinable func enlarged(by offsets: UIEdgeOffsets) -> CGSize {
         CGSize(
             width: width + offsets.left + offsets.right,
             height: height + offsets.top + offsets.bottom
@@ -51,42 +56,42 @@ public extension CGSize {
 
 // MARK: Operator
 
-@inlinable public func +(_ lhs: CGSize, _ rhs: CGSize) -> CGSize {
+@inlinable public func + (_ lhs: CGSize, _ rhs: CGSize) -> CGSize {
     CGSize(
         width: lhs.width + rhs.width,
         height: lhs.height + rhs.height
     )
 }
 
-@inlinable public func -(_ lhs: CGSize, _ rhs: CGSize) -> CGSize {
+@inlinable public func - (_ lhs: CGSize, _ rhs: CGSize) -> CGSize {
     CGSize(
         width: lhs.width - rhs.width,
         height: lhs.height - rhs.height
     )
 }
 
-@inlinable public func +(_ lhs: CGSize, _ rhs: CGFloat) -> CGSize {
+@inlinable public func + (_ lhs: CGSize, _ rhs: CGFloat) -> CGSize {
     CGSize(
         width: lhs.width + rhs,
         height: lhs.height + rhs
     )
 }
 
-@inlinable public func -(_ lhs: CGSize, _ rhs: CGFloat) -> CGSize {
+@inlinable public func - (_ lhs: CGSize, _ rhs: CGFloat) -> CGSize {
     CGSize(
         width: lhs.width - rhs,
         height: lhs.height - rhs
     )
 }
 
-@inlinable public func *(_ lhs: CGSize, _ rhs: CGFloat) -> CGSize {
+@inlinable public func * (_ lhs: CGSize, _ rhs: CGFloat) -> CGSize {
     CGSize(
         width: lhs.width * rhs,
         height: lhs.height * rhs
     )
 }
 
-@inlinable public func /(_ lhs: CGSize, _ rhs: CGFloat) -> CGSize {
+@inlinable public func / (_ lhs: CGSize, _ rhs: CGFloat) -> CGSize {
     CGSize(
         width: lhs.width / rhs,
         height: lhs.height / rhs

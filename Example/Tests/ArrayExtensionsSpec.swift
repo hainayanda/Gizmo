@@ -13,6 +13,7 @@ import Gizmo
 
 class ArrayExtensionsSpec: QuickSpec {
     
+    // swiftlint:disable function_body_length
     override func spec() {
         it("should create new array with added element") {
             let array = [1, 2]
@@ -154,120 +155,40 @@ class ArrayExtensionsSpec: QuickSpec {
             let array = [object1, object2, object3]
             expect(array.removedSameInstance(in: [object3, object4])).to(equal([object1, object2]))
         }
-        it("should create unique array") {
-            let array = [1, 1, 2, 3, 4, 4, 5, 5, 5, 6]
-            expect(array.uniqued(where: ==)).to(equal([1, 2, 3, 4, 5, 6]))
+        it("should create array with target count") {
+            let targetCount = Int.random(in: 20..<50)
+            let array: [Int] = .init(targetCount: targetCount, indexedElement: { $0 })
+            var content = 0
+            array.forEach {
+                expect($0).to(equal(content))
+                content += 1
+            }
+            expect(content).to(equal(targetCount))
+            expect(array.count).to(equal(targetCount))
         }
-        it("should create unique array from hash") {
-            let array = [1, 1, 2, 3, 4, 4, 5, 5, 5, 6]
-            expect(array.uniqued(withHasher: { $0 })).to(equal([1, 2, 3, 4, 5, 6]))
+        it("should add array until reach count") {
+            let targetCount = Int.random(in: 20..<50)
+            var array: [DummyEquatable] = .dummies(count: Int.random(in: 0..<10))
+            var count = array.count
+            array.appendOrRemove(untilReachCount: targetCount) { index in
+                expect(count).to(equal(index))
+                count += 1
+                return DummyEquatable()
+            }
+            expect(count).to(equal(targetCount))
+            expect(count).to(equal(array.count))
         }
-        it("should create unique array") {
-            let array = [1, 1, 2, 3, 4, 4, 5, 5, 5, 6]
-            expect(array.unique).to(equal([1, 2, 3, 4, 5, 6]))
-        }
-        it("should removed elements instance found") {
-            let object1 = MyObject()
-            let object2 = MyObject()
-            let object3 = MyObject()
-            let object4 = MyObject()
-            let array = [object1, object1, object2, object3, object3, object3, object4]
-            expect(array.uniqueObjects).to(equal([object1, object2, object3, object4]))
-        }
-        it("should create symetric difference with another array") {
-            let array1 = [1, 2, 3, 4, 5, 6]
-            let array2 = [4, 5, 6, 7, 8, 9]
-            expect(array1.symetricDifference(with: array2, where: ==)).to(equal([1, 2, 3, 7, 8, 9]))
-            expect(array2.symetricDifference(with: array1, where: ==)).to(equal([7, 8, 9, 1, 2, 3]))
-        }
-        it("should substract array with another array") {
-            let array1 = [1, 2, 3, 4, 5, 6]
-            let array2 = [4, 5, 6, 7, 8, 9]
-            expect(array1.substracted(by: array2, where: ==)).to(equal([1, 2, 3]))
-            expect(array2.notPresent(in: array1, where: ==)).to(equal([7, 8, 9]))
-        }
-        it("should intersect array with another array") {
-            let array1 = [1, 2, 3, 4, 5, 6]
-            let array2 = [4, 5, 6, 7, 8, 9]
-            expect(array1.intersection(with: array2, where: ==)).to(equal([4, 5, 6]))
-            expect(array1.present(in: array2, where: ==)).to(equal([4, 5, 6]))
-        }
-        it("should create symetric difference with another array") {
-            let array1 = [1, 2, 3, 4, 5, 6]
-            let array2 = [4, 5, 6, 7, 8, 9]
-            expect(array1.symetricDifference(with: array2)).to(equal([1, 2, 3, 7, 8, 9]))
-            expect(array2.symetricDifference(with: array1)).to(equal([7, 8, 9, 1, 2, 3]))
-        }
-        it("should substract array with another array") {
-            let array1 = [1, 2, 3, 4, 5, 6]
-            let array2 = [4, 5, 6, 7, 8, 9]
-            expect(array1.substracted(by: array2)).to(equal([1, 2, 3]))
-            expect(array2.notPresent(in: array1)).to(equal([7, 8, 9]))
-        }
-        it("should intersect array with another array") {
-            let array1 = [1, 2, 3, 4, 5, 6]
-            let array2 = [4, 5, 6, 7, 8, 9]
-            expect(array1.intersection(with: array2)).to(equal([4, 5, 6]))
-            expect(array1.present(in: array2)).to(equal([4, 5, 6]))
-        }
-        it("should create symetric difference with another array") {
-            let array1 = [1, 2, 3, 4, 5, 6]
-            let array2 = [4, 5, 6, 7, 8, 9]
-            expect(array1.symetricDifference(with: array2, withHasher: { $0 })).to(equal([1, 2, 3, 7, 8, 9]))
-            expect(array2.symetricDifference(with: array1, withHasher: { $0 })).to(equal([7, 8, 9, 1, 2, 3]))
-        }
-        it("should substract array with another array") {
-            let array1 = [1, 2, 3, 4, 5, 6]
-            let array2 = [4, 5, 6, 7, 8, 9]
-            expect(array1.substracted(by: array2, withHasher: { $0 })).to(equal([1, 2, 3]))
-            expect(array2.notPresent(in: array1, withHasher: { $0 })).to(equal([7, 8, 9]))
-        }
-        it("should intersect array with another array") {
-            let array1 = [1, 2, 3, 4, 5, 6]
-            let array2 = [4, 5, 6, 7, 8, 9]
-            expect(array1.intersection(with: array2, withHasher: { $0 })).to(equal([4, 5, 6]))
-            expect(array1.present(in: array2, withHasher: { $0 })).to(equal([4, 5, 6]))
-        }
-        it("should create symetric difference with another array") {
-            let object1 = MyObject()
-            let object2 = MyObject()
-            let object3 = MyObject()
-            let object4 = MyObject()
-            let object5 = MyObject()
-            let object6 = MyObject()
-            let array1 = [object1, object2, object3, object4]
-            let array2 = [object3, object4, object5, object6]
-            expect(array1.objectsSymetricDifference(with: array2)).to(equal([object1, object2, object5, object6]))
-            expect(array2.objectsSymetricDifference(with: array1)).to(equal([object5, object6, object1, object2]))
-        }
-        it("should substract array with another array") {
-            let object1 = MyObject()
-            let object2 = MyObject()
-            let object3 = MyObject()
-            let object4 = MyObject()
-            let object5 = MyObject()
-            let object6 = MyObject()
-            let array1 = [object1, object2, object3, object4]
-            let array2 = [object3, object4, object5, object6]
-            expect(array1.objectsSubstracted(by: array2)).to(equal([object1, object2]))
-            expect(array2.objectsNotPresent(in: array1)).to(equal([object5, object6]))
-        }
-        it("should intersect array with another array") {
-            let object1 = MyObject()
-            let object2 = MyObject()
-            let object3 = MyObject()
-            let object4 = MyObject()
-            let object5 = MyObject()
-            let object6 = MyObject()
-            let array1 = [object1, object2, object3, object4]
-            let array2 = [object3, object4, object5, object6]
-            expect(array1.objectsIntersection(with: array2)).to(equal([object3, object4]))
-            expect(array1.objectsPresent(in: array2)).to(equal([object3, object4]))
+        it("should remove array until reach count") {
+            let targetCount = Int.random(in: 0..<10)
+            var array: [DummyEquatable] = .dummies(count: Int.random(in: 10..<50))
+            array.appendOrRemove(untilReachCount: targetCount) { _ in DummyEquatable() }
+            expect(array.count).to(equal(targetCount))
         }
     }
+    // swiftlint:enable function_body_length
 }
 
-fileprivate class MyObject: Equatable {
+private class MyObject: Equatable {
     let id: String = UUID().uuidString
     
     static func == (lhs: MyObject, rhs: MyObject) -> Bool {

@@ -68,6 +68,7 @@ Gizmo is available under the MIT license. See the LICENSE file for more info.
 
 - `Array` Extensions
 - `Collection` Extensions
+- `Sequence` Extensions
 - `Data` Extensions
 - `Date` Extensions
 - `Dictionary` Extensions
@@ -81,6 +82,7 @@ Gizmo is available under the MIT license. See the LICENSE file for more info.
 - `CACornerMask` Extensions
 - `CGRect` Extensions
 - `CGSize` Extensions
+- `CGFloat` Extensions
 - `UIColor` Extensions
 - `UIEdgeInsets` Extensions
 - `UIResponder` Extensions
@@ -94,7 +96,7 @@ Gizmo is available under the MIT license. See the LICENSE file for more info.
 ### Extra
 
 - `GizmoError`
-- `UniqueSequence`
+- `DoublyLinkedList`
 
 ***
 
