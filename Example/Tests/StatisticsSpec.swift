@@ -71,6 +71,14 @@ class StatisticsSpec: QuickSpec {
         it("should get modus of element") {
             expect([1, 2, 2, 3, 3, 3, 4, 5, 5].modus(where: ==)).to(equal(3))
         }
+        it("should get modus of objects") {
+            let obj1 = NSObject()
+            let obj2 = NSObject()
+            let obj3 = NSObject()
+            let obj4 = NSObject()
+            let obj5 = NSObject()
+            expect([obj1, obj2, obj2, obj3, obj3, obj3, obj4, obj5, obj5].objectModus).to(equal(obj3))
+        }
         it("should group by frequency") {
             expect([1, 2, 2, 3, 3, 3, 4, 5, 5].groupedByFrequency())
                 .to(equal([1: 1, 2: 2, 3: 3, 4: 1, 5: 2]))

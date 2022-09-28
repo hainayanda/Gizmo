@@ -1,6 +1,10 @@
 PODS:
+  - Chary (1.0.3)
   - Fakery (5.1.0)
-  - Gizmo (1.0.0)
+  - Gizmo (1.0.0):
+    - LazySequence (~> 1.0)
+  - LazySequence (1.0.0):
+    - Chary (~> 1.0.3)
   - Nimble (10.0.0)
   - Quick (5.0.1)
 
@@ -12,7 +16,9 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Chary
     - Fakery
+    - LazySequence
     - Nimble
     - Quick
 
@@ -21,11 +27,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Chary: ff88ea887c2c914e91ed2213352f3d5f67e7d788
   Fakery: a90caff00ca5cacde6c161c3eafc72314a03d34d
-  Gizmo: fb0362bf63c7f79e7d737e79d28380ea3aa6f967
+  Gizmo: 96bdf0e4efc71a353c6cf5555f18837cd044f26d
+  LazySequence: b71de6546d467cbe6482eab2c56bfdf0e7be8dca
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
 
-PODFILE CHECKSUM: f180d872715caf81da21225b670dcbd4b6d52e13
+PODFILE CHECKSUM: fad8c837ade7fb5d9147852049d7aaadd9ac0604
 
 COCOAPODS: 1.11.3

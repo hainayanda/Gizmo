@@ -23,16 +23,7 @@
 		BB36053028938C3300D288C4 /* UIColorExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36052F28938C3300D288C4 /* UIColorExtensionsSpec.swift */; };
 		BB3B978128A7487600423EE1 /* TimeZoneSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B978028A7487600423EE1 /* TimeZoneSpec.swift */; };
 		BB72F0B1289A34380056B901 /* StatisticsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB72F0B0289A34380056B901 /* StatisticsSpec.swift */; };
-		BB95114828C2E98900A5A2EC /* CompactMappedSequenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95114728C2E98900A5A2EC /* CompactMappedSequenceSpec.swift */; };
 		BB95114B28C2E9AB00A5A2EC /* CommonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95114A28C2E9AB00A5A2EC /* CommonModel.swift */; };
-		BB95114D28C2EE1600A5A2EC /* FilteredSequenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95114C28C2EE1600A5A2EC /* FilteredSequenceSpec.swift */; };
-		BB95114F28C2EEAF00A5A2EC /* IntersectionSequenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95114E28C2EEAF00A5A2EC /* IntersectionSequenceSpec.swift */; };
-		BB95115128C2F08F00A5A2EC /* CombinationSequenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95115028C2F08F00A5A2EC /* CombinationSequenceSpec.swift */; };
-		BB95115328C2F31D00A5A2EC /* SequenceWrapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95115228C2F31D00A5A2EC /* SequenceWrapperSpec.swift */; };
-		BB95115528C2F4C700A5A2EC /* SubstractedSequenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95115428C2F4C700A5A2EC /* SubstractedSequenceSpec.swift */; };
-		BB95115728C2F62700A5A2EC /* UniqueSequenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95115628C2F62700A5A2EC /* UniqueSequenceSpec.swift */; };
-		BB95115928C2F7E500A5A2EC /* SequenceExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95115828C2F7E500A5A2EC /* SequenceExtensionsSpec.swift */; };
-		BB95116128C3617D00A5A2EC /* DoublyLinkedListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95116028C3617D00A5A2EC /* DoublyLinkedListSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +33,7 @@
 		561FB04DCC52832698BE1CCF /* Pods-Gizmo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gizmo_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Gizmo_Tests/Pods-Gizmo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Gizmo_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gizmo_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A54AA5409F196F12E35653D1 /* Gizmo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Gizmo.podspec; path = ../Gizmo.podspec; sourceTree = "<group>"; };
+		A54AA5409F196F12E35653D1 /* Gizmo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Gizmo.podspec; path = ../Gizmo.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BB3604F228902C6F00D288C4 /* CollectionExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensionsSpec.swift; sourceTree = "<group>"; };
 		BB36051628911A5100D288C4 /* DateExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionsSpec.swift; sourceTree = "<group>"; };
 		BB360518289250CB00D288C4 /* DictionaryExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsSpec.swift; sourceTree = "<group>"; };
@@ -58,16 +49,7 @@
 		BB36052F28938C3300D288C4 /* UIColorExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensionsSpec.swift; sourceTree = "<group>"; };
 		BB3B978028A7487600423EE1 /* TimeZoneSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneSpec.swift; sourceTree = "<group>"; };
 		BB72F0B0289A34380056B901 /* StatisticsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsSpec.swift; sourceTree = "<group>"; };
-		BB95114728C2E98900A5A2EC /* CompactMappedSequenceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactMappedSequenceSpec.swift; sourceTree = "<group>"; };
 		BB95114A28C2E9AB00A5A2EC /* CommonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModel.swift; sourceTree = "<group>"; };
-		BB95114C28C2EE1600A5A2EC /* FilteredSequenceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredSequenceSpec.swift; sourceTree = "<group>"; };
-		BB95114E28C2EEAF00A5A2EC /* IntersectionSequenceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionSequenceSpec.swift; sourceTree = "<group>"; };
-		BB95115028C2F08F00A5A2EC /* CombinationSequenceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationSequenceSpec.swift; sourceTree = "<group>"; };
-		BB95115228C2F31D00A5A2EC /* SequenceWrapperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceWrapperSpec.swift; sourceTree = "<group>"; };
-		BB95115428C2F4C700A5A2EC /* SubstractedSequenceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubstractedSequenceSpec.swift; sourceTree = "<group>"; };
-		BB95115628C2F62700A5A2EC /* UniqueSequenceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueSequenceSpec.swift; sourceTree = "<group>"; };
-		BB95115828C2F7E500A5A2EC /* SequenceExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtensionsSpec.swift; sourceTree = "<group>"; };
-		BB95116028C3617D00A5A2EC /* DoublyLinkedListSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedListSpec.swift; sourceTree = "<group>"; };
 		F2C13134AD836193EA375B7B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,12 +124,15 @@
 			isa = PBXGroup;
 			children = (
 				BB36051E2892579900D288C4 /* ClosureHelperSpec.swift */,
-				BB95116028C3617D00A5A2EC /* DoublyLinkedListSpec.swift */,
 				BB72F0B0289A34380056B901 /* StatisticsSpec.swift */,
 				BB3B978028A7487600423EE1 /* TimeZoneSpec.swift */,
-				BB95114528C2E86A00A5A2EC /* Extensions */,
+				BB360520289265AD00D288C4 /* ArrayExtensionsSpec.swift */,
+				BB3604F228902C6F00D288C4 /* CollectionExtensionsSpec.swift */,
+				BB36051628911A5100D288C4 /* DateExtensionsSpec.swift */,
+				BB360518289250CB00D288C4 /* DictionaryExtensionsSpec.swift */,
+				BB3605222892BB8200D288C4 /* RadianExtensionsSpec.swift */,
+				BB36051C2892565700D288C4 /* StringExtensionsSpec.swift */,
 				BB95114928C2E99C00A5A2EC /* Model */,
-				BB95114628C2E89A00A5A2EC /* Sequence */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -163,34 +148,6 @@
 				BB36052D2893881100D288C4 /* UIResponderExtensionsSpec.swift */,
 			);
 			name = UIKit;
-			sourceTree = "<group>";
-		};
-		BB95114528C2E86A00A5A2EC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				BB360520289265AD00D288C4 /* ArrayExtensionsSpec.swift */,
-				BB3604F228902C6F00D288C4 /* CollectionExtensionsSpec.swift */,
-				BB36051628911A5100D288C4 /* DateExtensionsSpec.swift */,
-				BB360518289250CB00D288C4 /* DictionaryExtensionsSpec.swift */,
-				BB3605222892BB8200D288C4 /* RadianExtensionsSpec.swift */,
-				BB95115828C2F7E500A5A2EC /* SequenceExtensionsSpec.swift */,
-				BB36051C2892565700D288C4 /* StringExtensionsSpec.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-		BB95114628C2E89A00A5A2EC /* Sequence */ = {
-			isa = PBXGroup;
-			children = (
-				BB95115028C2F08F00A5A2EC /* CombinationSequenceSpec.swift */,
-				BB95114728C2E98900A5A2EC /* CompactMappedSequenceSpec.swift */,
-				BB95114C28C2EE1600A5A2EC /* FilteredSequenceSpec.swift */,
-				BB95114E28C2EEAF00A5A2EC /* IntersectionSequenceSpec.swift */,
-				BB95115228C2F31D00A5A2EC /* SequenceWrapperSpec.swift */,
-				BB95115428C2F4C700A5A2EC /* SubstractedSequenceSpec.swift */,
-				BB95115628C2F62700A5A2EC /* UniqueSequenceSpec.swift */,
-			);
-			name = Sequence;
 			sourceTree = "<group>";
 		};
 		BB95114928C2E99C00A5A2EC /* Model */ = {
@@ -285,15 +242,19 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Gizmo_Tests/Pods-Gizmo_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Chary/Chary.framework",
 				"${BUILT_PRODUCTS_DIR}/Fakery/Fakery.framework",
 				"${BUILT_PRODUCTS_DIR}/Gizmo/Gizmo.framework",
+				"${BUILT_PRODUCTS_DIR}/LazySequence/LazySequence.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fakery.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gizmo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LazySequence.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
@@ -333,25 +294,16 @@
 			files = (
 				BB72F0B1289A34380056B901 /* StatisticsSpec.swift in Sources */,
 				BB3605232892BB8200D288C4 /* RadianExtensionsSpec.swift in Sources */,
-				BB95115728C2F62700A5A2EC /* UniqueSequenceSpec.swift in Sources */,
-				BB95115928C2F7E500A5A2EC /* SequenceExtensionsSpec.swift in Sources */,
-				BB95115128C2F08F00A5A2EC /* CombinationSequenceSpec.swift in Sources */,
 				BB3605282892C0A700D288C4 /* CGRectExtensionsSpec.swift in Sources */,
 				BB3B978128A7487600423EE1 /* TimeZoneSpec.swift in Sources */,
 				BB36051F2892579900D288C4 /* ClosureHelperSpec.swift in Sources */,
 				BB36052C289385DB00D288C4 /* UIEdgeExtensionsSpec.swift in Sources */,
 				BB95114B28C2E9AB00A5A2EC /* CommonModel.swift in Sources */,
 				BB36051728911A5100D288C4 /* DateExtensionsSpec.swift in Sources */,
-				BB95114F28C2EEAF00A5A2EC /* IntersectionSequenceSpec.swift in Sources */,
-				BB95115528C2F4C700A5A2EC /* SubstractedSequenceSpec.swift in Sources */,
 				BB360521289265AD00D288C4 /* ArrayExtensionsSpec.swift in Sources */,
-				BB95114D28C2EE1600A5A2EC /* FilteredSequenceSpec.swift in Sources */,
 				BB36053028938C3300D288C4 /* UIColorExtensionsSpec.swift in Sources */,
 				BB3604F328902C6F00D288C4 /* CollectionExtensionsSpec.swift in Sources */,
-				BB95116128C3617D00A5A2EC /* DoublyLinkedListSpec.swift in Sources */,
 				BB36052A28935F8B00D288C4 /* CACornerMaskExtensionsSpec.swift in Sources */,
-				BB95114828C2E98900A5A2EC /* CompactMappedSequenceSpec.swift in Sources */,
-				BB95115328C2F31D00A5A2EC /* SequenceWrapperSpec.swift in Sources */,
 				BB3605262892BDC400D288C4 /* CGSizeExtensionsSpec.swift in Sources */,
 				BB36052E2893881100D288C4 /* UIResponderExtensionsSpec.swift in Sources */,
 				BB360519289250CB00D288C4 /* DictionaryExtensionsSpec.swift in Sources */,

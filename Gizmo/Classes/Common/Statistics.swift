@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import LazySequence
 
 // MARK: Median
 
 public extension Collection where Element: Comparable {
     
     /// Find median of the array if its sorted
-    /// - Complexity: O((*n* / 2) log *n*) on average, where *n* is the number of iteration run by collection iterator
+    /// - Complexity: O((*n* log *n*) / 2) on average, where *n* is the size of the collection
     @inlinable var median: Median<Element> {
         guard count > 1 else {
             guard let median = self.first else {
@@ -21,13 +22,15 @@ public extension Collection where Element: Comparable {
             return .single(median)
         }
         let medianIndex = count / 2
-        let medianCount = medianIndex + 1
-        
-        let sortedUntilMedian = Array(sortedSequence().capped(atMaxIteration: medianCount))
-        if count % 2 == 0 {
-            return .double(sortedUntilMedian[medianIndex - 1], sortedUntilMedian[medianIndex])
+        let median = lazy.sortedSequence()
+            .capped(atMaxIteration: medianIndex + 1)
+            .droppedFirst(medianIndex - 1)
+            .asArray
+        guard let last = median.last else { return .noMedian }
+        guard let first = median.first, count % 2 == 0, last != first else {
+            return .single(last)
         }
-        return .single(sortedUntilMedian[medianIndex])
+        return .double(first, last)
     }
 }
 
@@ -35,7 +38,7 @@ public extension Collection where Element: Comparable {
 
 public extension Sequence where Element: AdditiveArithmetic {
     /// Sum all the elements in this array
-    /// - Complexity: O(*n*)  on average, where *n* is the number of iteration run by sequence iterator
+    /// - Complexity: O(*n*)  on average, where *n* is the size of the sequence
     @inlinable var sum: Element {
         reduce(.zero) { partialResult, element in
             partialResult + element
@@ -47,7 +50,7 @@ public extension Sequence where Element: AdditiveArithmetic {
 
 public extension Sequence where Element: FloatingPoint {
     /// Calculate average value of the array elements
-    /// - Complexity: O(*n*)  on average, where *n* is the number of iteration run by collection iterator
+    /// - Complexity: O(*n*)  on average, where *n* is the size of the sequence
     @inlinable var average: Element {
         var count = 0
         let sum: Element = reduce(.zero) { partialResult, element in
@@ -60,7 +63,7 @@ public extension Sequence where Element: FloatingPoint {
 
 public extension Sequence where Element: BinaryInteger {
     /// Calculate average value of the array elements
-    /// - Complexity: O(*n*)  on average, where *n* is the number of iteration run by sequence iterator
+    /// - Complexity: O(*n*)  on average, where *n* is the size of the sequence
     @inlinable var average: Element {
         var count = 0
         let sum: Element = reduce(.zero) { partialResult, element in
@@ -76,7 +79,7 @@ public extension Sequence where Element: BinaryInteger {
 public extension Sequence where Element: Comparable {
     
     /// Find the smallest element in this array
-    /// - Complexity: O(*n*)  on average, where *n* is the number of iteration run by sequence iterator
+    /// - Complexity: O(*n*)  on average, where *n* is the size of the sequence
     @inlinable var smallest: Element? {
         reduce(nil) { lastSmallest, element in
             guard let lastSmallest = lastSmallest else {
@@ -87,7 +90,7 @@ public extension Sequence where Element: Comparable {
     }
     
     /// Find the biggest element in this array
-    /// - Complexity: O(*n*)  on average, where *n* is the number of iteration run by sequence iterator
+    /// - Complexity: O(*n*)  on average, where *n* is the size of the sequence
     @inlinable var biggest: Element? {
         reduce(nil) { lastBiggest, element in
             guard let lastBiggest = lastBiggest else {
@@ -102,7 +105,7 @@ public extension Sequence where Element: Comparable {
 
 public extension Sequence where Element: Hashable {
     /// Return the element that appears most often in this array
-    /// - Complexity: O(*n*)  on average, where *n* is the number of iteration run by sequence iterator
+    /// - Complexity: O(*n*)  on average, where *n* is the size of the sequence
     @inlinable var modus: Element? {
         var counted: [Element: Int] = [:]
         let lastModus: (element: Element?, count: Int) = (nil, 0)
@@ -116,7 +119,7 @@ public extension Sequence where Element: Hashable {
 
 public extension Sequence {
     /// Return the element that appears most often in this array
-    /// - Complexity: O(*n* log *n*)  on average, where *n* is the number of iteration run by sequence iterator
+    /// - Complexity: O(*n* log *n*)  on average, where *n* is the size of the sequence
     /// - Parameter consideredSame: Closure used to compare the elements
     /// - Returns: Element that appears most often in this array
     @inlinable func modus(where consideredSame: (Element, Element) -> Bool) -> Element? {
@@ -136,16 +139,31 @@ public extension Sequence {
 
 public extension Sequence where Element: Equatable {
     /// Return the element that appears most often in this array
-    /// - Complexity: O(*n* log *n*)  on average, where *n* is the number of iteration run by sequence iterator
+    /// - Complexity: O(*n* log *n*)  on average, where *n* is the size of the sequence
     @inlinable var modus: Element? {
         modus(where: ==)
+    }
+}
+
+public extension Sequence where Element: AnyObject {
+    /// Return the object that appears most often in this array
+    /// - Complexity: O(*n*)  on average, where *n* is the size of the sequence
+    @inlinable var objectModus: Element? {
+        var counted: [ObjectIdentifier: Int] = [:]
+        let lastModus: (element: Element?, count: Int) = (nil, 0)
+        return reduce(lastModus) { lastModus, element in
+            let identifier = ObjectIdentifier(element)
+            let currentCount = (counted[identifier] ?? 0) + 1
+            counted[identifier] = currentCount
+            return lastModus.count < currentCount ? (element, currentCount): lastModus
+        }.element
     }
 }
 
 public extension Sequence where Element: Hashable {
     
     /// Return Dictionary of Element and Int which represent the element count in this array
-    /// - Complexity: O(*n*), where *n* is the number of iteration run by sequence iterator
+    /// - Complexity: O(*n*), where *n* is the size of the sequence
     /// - Returns: Dictionary of Element and Int
     @inlinable func groupedByFrequency() -> [Element: Int] {
         reduce([:]) { partialResult, element in
