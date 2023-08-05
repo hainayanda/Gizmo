@@ -77,16 +77,6 @@ Gizmo is available under the MIT license. See the LICENSE file for more info.
 - `TimeInterval` Extensions
 - `TimeZone` Extensions
 
-### UIKit Extensions
-
-- `CACornerMask` Extensions
-- `CGRect` Extensions
-- `CGSize` Extensions
-- `CGFloat` Extensions
-- `UIColor` Extensions
-- `UIEdgeInsets` Extensions
-- `UIResponder` Extensions
-
 ### Helpers
 
 - Closure Helpers
@@ -96,7 +86,6 @@ Gizmo is available under the MIT license. See the LICENSE file for more info.
 ### Extra
 
 - `GizmoError`
-- `DoublyLinkedList`
 
 ***
 
